@@ -37,7 +37,98 @@
   </header>
 
   <main class="form-main">
+    <h1 class="form-main__title">Вязание на заказ</h1>
+    <p class="form-main__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
+      свяжемся с вами, чтобы уточнить детали.</p>
+    <form class="form" action="https://echo.htmlacademy.ru" method="get">
+      <fieldset class="form__type">
+        <legend class="form__legend">Тип:</legend>
+        <ul class="form__list type-list">
+          <li class="type-list__item">
+            <input class="type-list__input" id="accessory" type="radio" name="type" value="accessory" checked>
+            <label for="accessory">Аксессуар для
+              интерьера</label>
+          </li>
+          <li class="type-list__item">
+            <input class="type-list__input" id="toy" type="radio" name="type" value="toy">
+            <label for="toy">Детская игрушка</label>
+          </li>
+        </ul>
+      </fieldset>
 
+      <fieldset class="form__color">
+        <legend class="form__legend">Цвет:</legend>
+        <ul class="form__list color-list">
+          <li class="color-list__item">
+            <input class="color-list__input" id="white-color" type="checkbox" name="white-color" checked>
+            <label for="white-color">Белый</label>
+          </li>
+          <li class="color-list__item">
+            <input class="color-list__input" id="grey-color" type="checkbox" name="grey-color" checked>
+            <label for="grey-color">Серый</label>
+          </li>
+          <li class="color-list__item">
+            <input class="color-list__input" id="tiffany-color" type="checkbox" name="tiffany-color">
+            <label for="tiffany-color">«Тиффани»</label>
+          </li>
+          <li class="color-list__item">
+            <input class="color-list__input" id="black-color" type="checkbox" name="black-color">
+            <label for="black-color">Черный</label>
+          </li>
+          <li class="color-list__item">
+            <input class="color-list__input" id="pink-color" type="checkbox" name="pink-color">
+            <label for="pink-color">Розовый</label>
+          </li>
+          <li class="color-list__item">
+            <input class="color-list__input" id="orange-color" type="checkbox" name="orange-color">
+            <label for="orange-color">Оранжевый</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="form__type">
+        <legend class="form__legend">ФИО</legend>
+        <ul class="form__list name-list">
+          <li class="name-list__item">
+            <input class="name-list__input" id="first-name" type="text" name="first-name"
+              placeholder="Введите ваше имя*" required>
+            <label for="first-name">Имя:</label>
+          </li>
+          <li class="name-list__item">
+            <input class="name-list__input" id="second-name" type="text" name="second-name"
+              placeholder="Укажите фамилию*" required>
+            <label for="second-name">Фамилия:</label>
+          </li>
+          <li class="name-list__item">
+            <input class="name-list__input" id="middle-name" type="text" name="middle-name"
+              placeholder="Отчество, если желаете">
+            <label for="middle-name">Отчество:</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="form__tel">
+        <legend class="form__legend">Тел</legend>
+        <input class="form__input" type="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+      </fieldset>
+
+      <fieldset class="form__mail">
+        <legend class="form__legend">E-mail</legend>
+        <input class="form__input" type="email" name="email" placeholder="Ваш Email*" required>
+      </fieldset>
+
+      <fieldset class="form__text">
+        <legend class="form__legend">Доп</legend>
+        <textarea class="form__input" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+      </fieldset>
+
+      <small class="form__small">
+        <sup>*</sup>Поля обязательны для заполнения
+      </small>
+
+      <button class="form-button button" type="submit">Отправить заказ</button>
+
+    </form>
   </main>
 
   <footer class="page-footer">
