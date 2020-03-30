@@ -9,31 +9,29 @@
 <body>
 
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="#" width="86" height="35" alt="Логотип магазина Mishka">
+    <a class="logo" href="index.html">
+      <img class="logo__image" src="#" width="86" height="35" alt="Логотип магазина Mishka">
     </a>
 
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a>Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="site-list__item">
-            <a href="form.html">Вязание на заказ</a>
-          </li>
-          <li class="site-list__item">
-            <a href="search.html">Поиск по сайту</a>
-          </li>
-          <li class="site-list__item">
-            <a href="search.html">Корзина: пока пуста</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item site-list__item--active">
+          <a>Главная</a>
+        </li>
+        <li class="site-list__item">
+          <a href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="site-list__item">
+          <a href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="site-list__item">
+          <a href="search.html">Поиск по сайту</a>
+        </li>
+        <li class="site-list__item">
+          <a href="search.html">Корзина: пока пуста</a>
+        </li>
+      </ul>
     </nav>
 
   </header>
@@ -44,7 +42,7 @@
       <ul class="catalog__list">
         <li class="catalog-item">
           <img class="catalog-item__photo" src="#" width="260" height="195" alt="Вязаный зайчик голубого цвета">
-          <h3 class="catalog-item__title">Зайчик-попрыгайчик</h3>
+          <h2 class="catalog-item__title">Зайчик-попрыгайчик</h2>
           <p class="catalog-item__info">
             Рост 30 см, вес 200 г
           </p>
@@ -53,7 +51,7 @@
         <li class="catalog-item">
           <img class="catalog-item__photo" src="#" width="260" height="195"
             alt="Вязаная корзинка для белья бело-оранжевого цвета">
-          <h3 class="catalog-item__title">Корзинка для белья</h3>
+          <h2 class="catalog-item__title">Корзинка для белья</h2>
           <p class="catalog-item__info">
             Диаметр 15 см, высота 10 см
           </p>
@@ -62,14 +60,27 @@
         <li class="catalog-item">
           <img class="catalog-item__photo" src="#" width="260" height="195"
             alt="Вязаная большая корзинка бело-зеленого цвета">
-          <h3 class="catalog-item__title">Большая корзинка
-            для игрушек</h3>
+          <h2 class="catalog-item__title">Большая корзинка
+            для игрушек</h2>
           <p class="catalog-item__info">
             Диаметр 30 см, высота 30 см
           </p>
           <b class="catalog-item__price">1 500 руб.</b>
         </li>
       </ul>
+    </section>
+
+    <section class="production">
+      <h2 class="production__title">Процесс производства</h2>
+      <video class="production">
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.ogv" type="video/ogg">
+        <source src="video.webm" type="video/webm">
+      </video>
+      <p class="production__text">
+        По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+      </p>
+      <a class="production__button button" href="#">Сделать заказ</a>
     </section>
   </main>
 
