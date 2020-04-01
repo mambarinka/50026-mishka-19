@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,9 +16,9 @@ body {
   font-size: 15px;
   line-height: 30px;
   font-weight: 400;
-  color: #444444;
+  color: @grey;
 
-  background-color: #ffffff;
+  background-color: @white;
 }
 
 img {
@@ -36,21 +46,4 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.button {
-  display: inline-block;
-  font: inherit;
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 700;
-
-  text-align: center;
-  color: #444444;
-  vertical-align: middle;
-
-
-  border: 2px solid #444444;
-
-  cursor: pointer;
 }
