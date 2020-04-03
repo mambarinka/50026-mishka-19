@@ -7,6 +7,6 @@
   },
 
     "ignoreFiles": [
-    "source/less/normalize.less"
+    "source/less/general/normalize.less"
   ]
 }
