@@ -3,8 +3,24 @@
 }
 
 .promo-week__caption {
-  font-size: 17px;
+  .text-options(17px; 20px; 700; @design-color);
+}
+
+.promo-week__description {
+  .p-model();
+}
+
+.promo-week__table {
+  .p-model();
   line-height: 20px;
-  font-weight: 700;
-  color: @design-color;
+  border-collapse: collapse;
+}
+
+.promo-week__option,
+.promo-week__value {
+  border-bottom: 1px solid @border-color-table;
+}
+
+.promo-week__price {
+  .text-options(17px, 24px, 700, @text-color);
 }
