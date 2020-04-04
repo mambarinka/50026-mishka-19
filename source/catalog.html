@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Каталог детских товаров "Mishka"</title>
+  <link href="css/style.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -16,20 +17,17 @@
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list__item--active">
-          <a>Главная</a>
+        <li class="site-list__item">
+          <a class="site-list__link">Каталог товаров</a>
         </li>
         <li class="site-list__item">
-          <a href="catalog.html">Каталог товаров</a>
+          <a class="site-list__link" href="form.html">Вязание на заказ</a>
         </li>
         <li class="site-list__item">
-          <a href="form.html">Вязание на заказ</a>
+          <a class="site-list__link" href="search.html">Поиск по сайту</a>
         </li>
         <li class="site-list__item">
-          <a href="search.html">Поиск по сайту</a>
-        </li>
-        <li class="site-list__item">
-          <a href="search.html">Корзина: пока пуста</a>
+          <a class="site-list__link" href="basket.html">Корзина: пока пуста</a>
         </li>
       </ul>
     </nav>
@@ -37,35 +35,36 @@
   </header>
 
   <main class="catalog-main">
+    <h1 class="visually-hidden">Товары для дома и процесс их изготовления</h1>
     <section class="catalog">
-      <h1 class="catalog__title">Каталог товаров</h1>
-      <ul class="catalog__list">
-        <li class="catalog-item">
-          <img class="catalog-item__photo" src="#" width="260" height="195" alt="Вязаный зайчик голубого цвета">
-          <h2 class="catalog-item__title">Зайчик-попрыгайчик</h2>
-          <p class="catalog-item__info">
+      <h2 class="catalog__title">Каталог товаров</h2>
+      <ul class="catalog-list">
+        <li class="catalog-list__item">
+          <img class="catalog-list__photo" src="#" width="260" height="195" alt="Вязаный зайчик голубого цвета">
+          <h3 class="catalog-list__title">Зайчик-попрыгайчик</h3>
+          <p class="catalog-list__info">
             Рост 30 см, вес 200 г
           </p>
-          <b class="catalog-item__price">1 200 руб.</b>
+          <b class="catalog-list__price">1 200 руб.</b>
         </li>
-        <li class="catalog-item">
-          <img class="catalog-item__photo" src="#" width="260" height="195"
+        <li class="catalog-list__item">
+          <img class="catalog-list__photo" src="#" width="260" height="195"
             alt="Вязаная корзинка для белья бело-оранжевого цвета">
-          <h2 class="catalog-item__title">Корзинка для белья</h2>
-          <p class="catalog-item__info">
+          <h3 class="catalog-list__title">Корзинка для белья</h3>
+          <p class="catalog-list__info">
             Диаметр 15 см, высота 10 см
           </p>
-          <b class="catalog-item__price">690 руб.</b>
+          <b class="catalog-list__price">690 руб.</b>
         </li>
-        <li class="catalog-item">
-          <img class="catalog-item__photo" src="#" width="260" height="195"
+        <li class="catalog-list__item">
+          <img class="catalog-list__photo" src="#" width="260" height="195"
             alt="Вязаная большая корзинка бело-зеленого цвета">
-          <h2 class="catalog-item__title">Большая корзинка
-            для игрушек</h2>
-          <p class="catalog-item__info">
+          <h3 class="catalog-list__title">Большая корзинка
+            для игрушек</h3>
+          <p class="catalog-list__info">
             Диаметр 30 см, высота 30 см
           </p>
-          <b class="catalog-item__price">1 500 руб.</b>
+          <b class="catalog-list__price">1 500 руб.</b>
         </li>
       </ul>
     </section>
@@ -86,14 +85,14 @@
 
   <footer class="page-footer">
     <div class="page-footer__social social">
-      <ul class="social__list">
-        <li class="social__item">
+      <ul class="social-list">
+        <li class="social-list__item">
           <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
         </li>
-        <li class="social__item">
+        <li class="social-list__item">
           <a class="social__link social__link--facebook" href="#">Мы на Фейсбуке</a>
         </li>
-        <li class="social__item">
+        <li class="social-list__item">
           <a class="social__link social__link--twitter" href="#">Мы в Твиттере</a>
         </li>
       </ul>
