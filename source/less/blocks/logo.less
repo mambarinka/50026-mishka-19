@@ -1,6 +1,15 @@
 .logo {
   display: block;
+  height: 80px;
   border-bottom: 1px solid @border-color-table;
-  /* Временно для сетки */
-  min-height: 80px;
+  outline: 2px solid mediumaquamarine;
+
+  @media @tablet {
+    height: 88px;
+  }
+
+  @media @desktop {
+    /* Временно для сетки */
+    min-height: 89px;
+  }
 }
