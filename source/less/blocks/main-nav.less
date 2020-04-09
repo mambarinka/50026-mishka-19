@@ -1,44 +1,46 @@
-.main-nav {
-  display: flex;
-  flex-direction: column;
-  outline: 2px solid mediumpurple;
-  height: 315px;
-
+.main-nav__toggle {
+  position: absolute;
+  top: 33px;
+  right: 30px;
+  display: block;
+  font-size: 0;
+  border: none;
+  width: 20px;
+  height: 14px;
+  outline: 2px solid green;
 
   @media @tablet {
-    height: 88px;
+    display: none;
   }
 
   @media @desktop {
-    /* Временно для сетки */
-    min-height: 150px;
+    display: none;
   }
 }
 
-.main-nav__toggle {
-  display: none;
-  font-size: 0;
-  border: none;
-}
-
 .main-nav__list {
-  .list-reset();
+  position: absolute;
+  left: 0;
+  top: 240px;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   width: 100%;
-  flex-wrap: wrap;
+  .list-reset();
+
+  &--order {
+    top: 80px;
+  }
 
   @media @tablet {
-    flex-direction: row;
+    display: flex;
 
     &--order {
-      align-items: flex-start;
-      width: 440px;
-    }
-
-    &--user {
-      justify-content: flex-end;
-      width: auto;
+      position: absolute;
+      bottom: 0;
+      left: 46px;
+      width: 200px;
     }
   }
 }
@@ -46,13 +48,24 @@
 .main-nav__item {
   text-align: center;
   width: 100%;
+  background-color: @bg-color;
   border-bottom: 1px solid @border-color-table;
+
+  @media @tablet {
+    margin-right: 35px;
+
+    background-color: transparent;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .main-nav__link {
   display: block;
-  padding-top: 27px;
-  padding-bottom: 27px;
+  padding-top: 26px;
+  padding-bottom: 25px;
   font: inherit;
   .text-options (17px, 24px, 700, @text-color-dark);
   outline: 3px solid red;
@@ -64,5 +77,9 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media @tablet {
+    font-size: 15px;
   }
 }
