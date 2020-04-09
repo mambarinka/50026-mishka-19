@@ -1,9 +1,12 @@
 .main-nav {
+  display: flex;
+  flex-direction: column;
   outline: 2px solid mediumpurple;
   height: 315px;
 
+
   @media @tablet {
-    min-height: 64px;
+    height: 88px;
   }
 
   @media @desktop {
@@ -20,9 +23,29 @@
 
 .main-nav__list {
   .list-reset();
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+
+  @media @tablet {
+    flex-direction: row;
+
+    &--order {
+      align-items: flex-start;
+      width: 440px;
+    }
+
+    &--user {
+      justify-content: flex-end;
+      width: auto;
+    }
+  }
 }
 
 .main-nav__item {
+  text-align: center;
+  width: 100%;
   border-bottom: 1px solid @border-color-table;
 }
 
