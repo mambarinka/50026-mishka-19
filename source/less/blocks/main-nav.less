@@ -1,12 +1,12 @@
 .main-nav__toggle {
   position: absolute;
-  top: 33px;
+  top: 31px;
   right: 30px;
   display: block;
   font-size: 0;
   border: none;
   width: 20px;
-  height: 14px;
+  height: 16px;
   outline: 2px solid green;
 
   @media @tablet {
@@ -21,7 +21,7 @@
 .main-nav__list {
   position: absolute;
   left: 0;
-  top: 240px;
+  top: 80px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -29,34 +29,56 @@
   width: 100%;
   .list-reset();
 
-  &--order {
-    top: 80px;
+  &--user {
+    top: 240px;
+  }
+
+  &--promotion {
+    display: none;
   }
 
   @media @tablet {
     display: flex;
+    flex-direction: row;
+
 
     &--order {
       position: absolute;
       bottom: 0;
-      left: 46px;
-      width: 200px;
+      left: 50px;
+      align-items: flex-start;
+    }
+
+    &--user {
+      position: absolute;
+      right: 0;
+      top: 5px;
+      justify-content: flex-end;
+      padding-right: 50px;
+    }
+
+    &--promotion {
+      display: none;
     }
   }
 }
 
 .main-nav__item {
-  text-align: center;
   width: 100%;
   background-color: @bg-color;
   border-bottom: 1px solid @border-color-table;
 
   @media @tablet {
+    width: auto;
     margin-right: 35px;
-
     background-color: transparent;
 
     &:last-child {
+      margin-right: 0;
+    }
+
+    &--search {
+      width: 85px;
       margin-right: 0;
     }
   }
@@ -64,8 +86,9 @@
 
 .main-nav__link {
   display: block;
+  padding-left: 75px;
   padding-top: 26px;
-  padding-bottom: 25px;
+  padding-bottom: 27px;
   font: inherit;
   .text-options (17px, 24px, 700, @text-color-dark);
   outline: 3px solid red;
@@ -80,6 +103,24 @@
   }
 
   @media @tablet {
-    font-size: 15px;
+    &--smaller {
+      font-size: 15px;
+      padding-left: 0;
+    }
+
+    &--search {
+      font-size: 0;
+    }
+  }
+}
+
+.main-nav__text {
+  .p-model();
+  display: none;
+
+  @media @tablet {
+    display: block;
+    padding-right: 50px;
+    margin-top: 18px;
   }
 }
