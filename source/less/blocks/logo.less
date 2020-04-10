@@ -1,16 +1,28 @@
 .logo {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 80px;
+  text-align: center;
   border-bottom: 1px solid @border-color-table;
-  outline: 2px solid mediumaquamarine;
 
   @media @tablet {
+    justify-content: flex-start;
     width: 370px;
     height: 88px;
+    border-bottom: none;
   }
 
   @media @desktop {
+    justify-content: center;
     height: 89px;
+    margin: 0 auto;
+  }
+}
+
+.logo__image {
+  @media @tablet {
+    margin-left: 50px;
   }
 }
