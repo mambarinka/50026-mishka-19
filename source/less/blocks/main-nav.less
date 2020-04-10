@@ -1,13 +1,13 @@
 .main-nav__toggle {
   position: absolute;
-  top: 31px;
-  right: 30px;
+  top: 30px;
+  right: 31px;
   display: block;
   font-size: 0;
   border: none;
   width: 20px;
-  height: 16px;
-  background: url("../icon-menu-close.svg") no-repeat center;
+  height: 18px;
+  background: url("../../img/icon-menu-close.svg") no-repeat center;
 
   @media @tablet {
     display: none;
@@ -43,7 +43,7 @@
 
     &--order {
       position: absolute;
-      bottom: 0;
+      top: 75px;
       left: 50px;
       align-items: flex-start;
     }
@@ -51,7 +51,7 @@
     &--user {
       position: absolute;
       right: 0;
-      top: 5px;
+      top: 0;
       justify-content: flex-end;
       padding-right: 50px;
     }
@@ -92,8 +92,17 @@
     }
 
     &--search {
-      width: 85px;
+      width: 83px;
       margin-right: 0;
+      background: url("../../img/icon-search.svg") no-repeat 32px 37px;
+      border-right: 1px solid @border-color-table;
+      border-left: 1px solid @border-color-table;
+    }
+
+    &--basket {
+      padding-left: 83px;
+      width: 265px;
+      background: url("../../img/icon-cart.svg") no-repeat 32px 37px;
     }
   }
 
@@ -129,6 +138,8 @@
 
   @media @tablet {
     padding-left: 0;
+    padding-top: 31px;
+    padding-bottom: 27px;
 
     &--catalog,
     &--form {
