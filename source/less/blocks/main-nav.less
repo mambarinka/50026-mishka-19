@@ -24,7 +24,6 @@
   top: 80px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   align-items: center;
   width: 100%;
   .list-reset();
@@ -39,7 +38,7 @@
 
   @media @tablet {
     flex-direction: row;
-
+    flex-wrap: wrap;
 
     &--order {
       position: absolute;
@@ -49,7 +48,6 @@
     }
 
     &--user {
-      position: absolute;
       right: 0;
       top: 0;
       justify-content: flex-end;
@@ -63,12 +61,12 @@
 
   @media @desktop {
     &--order {
-      top: 5px;
+      top: 0;
     }
 
     &--promotion {
       position: absolute;
-      bottom: 0;
+      top: 75px;
       left: 50px;
       display: flex;
       align-items: flex-start;
@@ -92,7 +90,7 @@
     }
 
     &--search {
-      width: 83px;
+      width: 84px;
       margin-right: 0;
       background: url("../../img/icon-search.svg") no-repeat 32px 37px;
       border-right: 1px solid @border-color-table;
@@ -107,10 +105,8 @@
   }
 
   @media @desktop {
-    margin-right: 70px;
-
-    &:last-child {
-      margin-right: 0;
+    &--catalog {
+      margin-right: 71px;
     }
 
     &--incoming {
@@ -155,10 +151,6 @@
     &--catalog,
     &--form {
       font-size: 17px;
-    }
-
-    &--search {
-      font-size: 0;
     }
 
     &--incoming,
