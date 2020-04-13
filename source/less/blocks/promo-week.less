@@ -1,13 +1,45 @@
 .promo-week {
-
+  .container();
   .wrapper();
+  position: relative;
   min-height: 820px;
   padding-top: 25px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 16px;
+    left: 0;
+    bottom: -12px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @media @tablet {
+    padding-top: 41px;
+  }
+}
+
+.promo-week__wrapper {
+  @media @tablet {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .promo-week__title {
   .h2-model();
   margin-bottom: 5px;
+
+  @media @tablet {
+    width: 460px;
+    flex-grow: 1;
+    margin-bottom: 49px;
+    .text-options(43px, 50px, 700, @text-color-dark);
+  }
 }
 
 .promo-week__caption {
@@ -15,11 +47,22 @@
   .text-options(17px; 20px; 700; @design-color);
   text-transform: uppercase;
   margin-bottom: 23px;
+
+  @media @tablet {
+    width: 126px;
+    padding-top: 9px;
+    text-align: center;
+  }
 }
 
 .promo-week__description {
   .p-model();
   margin-bottom: 19px;
+
+  @media @tablet {
+    width: 51%;
+    .text-options(17px, 30px, 400, @text-color);
+  }
 }
 
 .promo-week__table {
@@ -28,6 +71,10 @@
   margin-bottom: 27px;
   line-height: 20px;
   border-collapse: collapse;
+
+  @media @tablet {
+    width: 50%;
+  }
 }
 
 .promo-week__option,
@@ -44,6 +91,10 @@
 .promo-week__img {
   display: block;
   margin-bottom: 24px;
+
+  @media @tablet {
+    width: 50%;
+  }
 }
 
 .promo-week__price {
@@ -51,8 +102,17 @@
   justify-content: center;
   .text-options(17px, 24px, 700, @text-color);
   margin-bottom: 26px;
+
+  @media @tablet {
+    width: 50%;
+  }
 }
 
 .promo-week__order {
   padding: 14px;
+  margin-bottom: 40px;
+
+  @media @tablet {
+    width: 50%;
+  }
 }
