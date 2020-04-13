@@ -1,26 +1,58 @@
+.promo-week {
+
+  .wrapper();
+  min-height: 820px;
+  padding-top: 25px;
+}
+
 .promo-week__title {
   .h2-model();
+  margin-bottom: 5px;
 }
 
 .promo-week__caption {
+  display: block;
   .text-options(17px; 20px; 700; @design-color);
+  text-transform: uppercase;
+  margin-bottom: 23px;
 }
 
 .promo-week__description {
   .p-model();
+  margin-bottom: 19px;
 }
 
 .promo-week__table {
   .p-model();
+  width: 100%;
+  margin-bottom: 27px;
   line-height: 20px;
   border-collapse: collapse;
 }
 
 .promo-week__option,
 .promo-week__value {
+  padding-top: 8px;
+  padding-bottom: 11px;
   border-bottom: 1px solid @border-color-table;
 }
 
+.promo-week__value {
+  padding-left: 15px;
+}
+
+.promo-week__img {
+  display: block;
+  margin-bottom: 24px;
+}
+
 .promo-week__price {
+  display: flex;
+  justify-content: center;
   .text-options(17px, 24px, 700, @text-color);
+  margin-bottom: 26px;
+}
+
+.promo-week__order {
+  padding: 14px;
 }

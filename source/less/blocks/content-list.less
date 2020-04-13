@@ -2,8 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 103px;
-  padding: 25px 33px 30px 28px;
+  padding: 18px 33px 24px 28px;
 
   &--interior {
     background-color: @design-color;
@@ -11,6 +10,12 @@
 
   &--toys {
     background-color: @design-dark-color;
+  }
+
+  @media @tablet {
+    width: 50%;
+    align-items: stretch;
+    padding: 27px 35px 33px 36px;
   }
 }
 
@@ -22,6 +27,15 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media @tablet {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media @desktop {
+    width: 25%;
   }
 }
 
