@@ -2,24 +2,116 @@
   .container();
   .wrapper();
   padding-top: 29px;
+
+  @media @tablet {
+    padding-top: 50px;
+  }
+
+  @media @desktop {
+    padding-left: 223px;
+    padding-top: 62px;
+  }
 }
 
 .advantages__title {
   .h2-model();
-  margin-bottom: 86px;
+  margin-bottom: 32px;
+
+  @media @tablet {
+    margin-bottom: 50px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media @desktop {
+    margin-bottom: 50px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .advantages__list {
   .list-reset();
+
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .advantages__item {
-  padding-top: 50px;
+  padding-top: 54px;
+  margin-bottom: 29px;
   .text-options(17px; 20px; 700; @text-color-dark);
 
   &--eco {
-    background-image: url("../../img/icon-feature-flower");
+    background-image: url("../../img/icon-feature-flower.svg");
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: 8px top;
+  }
+
+  &--nordic {
+    background-image: url("../../img/icon-feature-money.svg");
+    background-repeat: no-repeat;
+    background-position: 0 top;
+  }
+
+  &--likes {
+    background-image: url("../../img/icon-feature-heart.svg");
+    background-repeat: no-repeat;
+    background-position: 7px 6px;
+  }
+
+  &--manually {
+    background-image: url("../../img/icon-feature-ball.svg");
+    background-repeat: no-repeat;
+    background-position: 3px 3px;
+  }
+
+  &--native {
+    background-image: url("../../img/icon-feature-rocket.svg");
+    background-repeat: no-repeat;
+    background-position: -2px 4px;
+  }
+
+  &--pack {
+    background-image: url("../../img/icon-feature-gift.svg");
+    background-repeat: no-repeat;
+    background-position: 3px top;
+  }
+
+  @media @tablet {
+    width: 50%;
+    margin-bottom: 57px;
+    font-size: 20px;
+    line-height: 22px;
+
+    &--eco {
+      order: 1;
+    }
+
+    &--nordic {
+      order: 3;
+    }
+
+    &--likes {
+      order: 5;
+    }
+
+    &--manually {
+      order: 2;
+    }
+
+    &--native {
+      order: 4;
+    }
+
+    &--pack {
+      order: 6;
+    }
+  }
+
+  @media @desktop {
+    width: 352px;
   }
 }
