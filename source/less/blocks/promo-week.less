@@ -2,7 +2,6 @@
   .container();
   .wrapper();
   position: relative;
-  min-height: 820px;
   padding-top: 25px;
 
   &::after {
@@ -18,15 +17,25 @@
   }
 
   @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
     padding-top: 41px;
+  }
+
+  @media @desktop {
+    padding-top: 120px;
+    padding-left: 224px;
   }
 }
 
 .promo-week__wrapper {
+  display: flex;
+  flex-direction: column;
+
   @media @tablet {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
+    width: 290px;
   }
 }
 
@@ -39,6 +48,11 @@
     flex-grow: 1;
     margin-bottom: 49px;
     .text-options(43px, 50px, 700, @text-color-dark);
+  }
+
+  @media @desktop {
+    width: 700px;
+    .text-options(53px, 57px, 700, @text-color-dark);
   }
 }
 
@@ -53,6 +67,13 @@
     padding-top: 9px;
     text-align: center;
   }
+
+  @media @desktop {
+    position: absolute;
+    left: 69px;
+    order: -1;
+    padding-top: 13px;
+  }
 }
 
 .promo-week__description {
@@ -60,8 +81,13 @@
   margin-bottom: 19px;
 
   @media @tablet {
-    width: 51%;
+    width: 100%;
+    margin-bottom: 37px;
     .text-options(17px, 30px, 400, @text-color);
+  }
+
+  @media @desktop {
+    margin-bottom: 49px;
   }
 }
 
@@ -73,7 +99,11 @@
   border-collapse: collapse;
 
   @media @tablet {
-    width: 50%;
+    margin-bottom: 55px;
+  }
+
+  @media @tablet {
+    margin-bottom: 109px;
   }
 }
 
@@ -86,33 +116,53 @@
 
 .promo-week__value {
   padding-left: 15px;
-}
-
-.promo-week__img {
-  display: block;
-  margin-bottom: 24px;
 
   @media @tablet {
-    width: 50%;
+    padding-left: 0;
   }
 }
 
 .promo-week__price {
-  display: flex;
-  justify-content: center;
+  position: relative;
+  padding-top: 339px;
+  text-align: center;
   .text-options(17px, 24px, 700, @text-color);
   margin-bottom: 26px;
 
   @media @tablet {
-    width: 50%;
+    width: 100%;
+    padding-top: 0;
+    margin-bottom: 34px;
+    font-size: 20px;
   }
 }
 
 .promo-week__order {
+  order: 3;
   padding: 14px;
   margin-bottom: 40px;
 
   @media @tablet {
-    width: 50%;
+    width: 100%;
+    margin-bottom: 58px;
+  }
+}
+
+.promo-week__img {
+  position: absolute;
+  bottom: 142px;
+  display: block;
+  margin-bottom: 24px;
+
+  @media @tablet {
+    position: relative;
+    bottom: -7px;
+    width: 334px;
+  }
+
+  @media @desktop {
+    width: 524px;
+    bottom: 158px;
+    z-index: -1;
   }
 }
