@@ -8,7 +8,15 @@
     border: none;
     width: 20px;
     height: 18px;
-    background: url("../../img/icon-menu-close.svg") no-repeat center;
+    background: url("../../img/icon-menu-open.svg") no-repeat center;
+
+    &--opened {
+      background: url("../../img/icon-menu-close.svg") no-repeat center;
+    }
+
+    &--closed {
+      display: none;
+    }
 
     @media @tablet {
       display: none;
@@ -33,6 +41,14 @@
 
     &--promotion {
       display: none;
+    }
+
+    &--closed {
+      display: none;
+    }
+
+    &--opened {
+      display: flex;
     }
 
     @media @tablet {
@@ -60,11 +76,16 @@
       &--promotion {
         display: none;
       }
+
+      &--closed {
+        display: flex;
+      }
     }
 
     @media @desktop {
       &--order {
         top: 0;
+        z-index: 10;
       }
 
       &--promotion {
