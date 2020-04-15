@@ -3,6 +3,12 @@
   padding-right: 32px;
   padding-top: 24px;
   vertical-align: middle;
+
+  @media @tablet {
+    width: 184px;
+    padding: 0;
+    margin-left: auto;
+  }
 }
 
 .copyright__text {
@@ -12,10 +18,15 @@
 .copyright__link {
   display: flex;
   align-items: center;
+  margin-left: 9px;
   font-size: 0;
+
+  @media @tablet {
+    margin-left: 18px;
+  }
 }
 
-.copyright__icon{
+.copyright__icon {
   width: 42px;
   height: 43px;
 }
