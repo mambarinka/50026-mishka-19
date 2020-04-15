@@ -4,13 +4,31 @@
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: @bg-grey-color;
+
+  @media @tablet{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 39px;
+  }
+}
+
+.page-footer__logo{
+  display: none;
+  outline: 2px solid blue;
+  @media @tablet{
+    display: block;
+  }
 }
 
 .page-footer__social {
   border-bottom: 1px solid @border-color-footer;
+  outline: 2px solid black;
 }
 
 .page-footer__copyright {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  outline: 2px solid red;
 }
