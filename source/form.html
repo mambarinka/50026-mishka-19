@@ -217,6 +217,21 @@
     </div>
 
   </footer>
+
+  <script>
+    var btnToggle = document.querySelector(".main-nav__toggle");
+    var mainMenu = document.querySelector(".main-nav__list");
+
+
+    mainMenu.classList.add("main-nav__list--closed");
+
+    btnToggle.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      btnToggle.classList.toggle("main-nav__toggle--opened");
+      mainMenu.classList.toggle("main-nav__list--opened");
+    });
+
+  </script>
 </body>
 
 </html>
