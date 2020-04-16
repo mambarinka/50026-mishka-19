@@ -1,13 +1,28 @@
+.catalog {
+  .container();
+}
+
 .catalog__title {
   .h2-model();
+  padding-top: 70px;
+  padding-bottom: 76px;
+  margin-bottom: 30px;
+  text-align: center;
   font-size: 27px;
   background-color: @bg-grey-color;
 }
 
 .catalog__list {
   .list-reset();
+  .wrapper();
 }
 
 .catalog__item {
   border: 1px solid @border-color-table;
+}
+
+
+.card-product__photo {
+  display: block;
+  margin-bottom: 30px;
 }
