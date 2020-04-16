@@ -36,6 +36,15 @@
 .catalog__list {
   .list-reset();
   .wrapper();
+
+  @media @tablet {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media @desktop {
+    flex-direction: row;
+  }
 }
 
 .catalog__item {
