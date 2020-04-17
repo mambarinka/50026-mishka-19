@@ -11,6 +11,16 @@
     padding-bottom: 0;
     margin-bottom: 53px;
   }
+
+  @media @desktop {
+    flex-direction: column;
+    width: 315px;
+    margin-right: 52px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
 }
 
 .card-product__photo {
@@ -19,8 +29,13 @@
 
   @media @tablet {
     width: 50%;
-    height: 332px;
+    min-height: 332px;
     margin-bottom: 0;
+  }
+
+  @media @desktop {
+    width: 100%;
+    min-height: 462px;
   }
 }
 
@@ -32,6 +47,12 @@
     flex-direction: column;
     width: 50%;
     padding: 24px 26px 27px 27px;
+  }
+
+  @media @desktop {
+    width: 100%;
+    flex-grow: 1;
+    padding-bottom: 26px;
   }
 }
 
@@ -58,6 +79,10 @@
     margin-bottom: 0;
     font-size: 15px;
   }
+
+  @media @desktop {
+    padding-bottom: 14px;
+  }
 }
 
 .card-product__price {
@@ -68,6 +93,10 @@
 
   @media @tablet {
     font-size: 17px;
+  }
+
+  @media @desktop {
+    margin-top: 22px;
   }
 }
 

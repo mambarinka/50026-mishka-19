@@ -16,6 +16,7 @@
     padding-top: 96px;
     padding-bottom: 92px;
     margin-bottom: 68px;
+    z-index: -1;
     font-size: 43px;
     line-height: 50px;
 
@@ -29,6 +30,19 @@
       background-image: url("../../img/bg-zigzag-fill.svg");
       background-repeat: no-repeat;
       background-size: contain;
+    }
+  }
+
+  @media @desktop {
+    padding-top: 93px;
+    padding-bottom: 112px;
+    margin-bottom: 120px;
+    font-size: 53px;
+    line-height: 57px;
+
+    &::after {
+      background-repeat: repeat;
+      background-size: cover;
     }
   }
 }

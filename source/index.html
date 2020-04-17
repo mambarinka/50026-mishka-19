@@ -231,12 +231,10 @@
 
   <script>
     var btnToggle = document.querySelector(".main-nav__toggle");
-    /* var mainMenu = document.querySelector(".main-nav__list"); */
     var mainMenu = document.querySelectorAll(".main-nav__list");
 
     window.onload = function () {
-    btnToggle.classList.remove("main-nav__toggle--no-js");
-      /* mainMenu.classList.add("main-nav__list--closed"); */
+      btnToggle.classList.remove("main-nav__toggle--no-js");
       mainMenu.forEach(element => element.classList.add("main-nav__list--closed"));
       btnToggle.classList.remove("main-nav__toggle--opened");
     };
@@ -248,7 +246,6 @@
 
       btnToggle.classList.toggle("main-nav__toggle--opened");
       mainMenu.forEach(element => element.classList.toggle("main-nav__list--closed"));
-      /* mainMenu.classList.toggle("main-nav__list--closed"); */
     });
 
   </script>
