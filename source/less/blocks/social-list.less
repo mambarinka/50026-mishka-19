@@ -1,7 +1,19 @@
 .social-list {
+  .list-reset();
   display: flex;
-  justify-content: space-between;
-  width: 141px;
-  margin: 0 auto;
-  padding-top: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid @border-color-footer;
+
+  @media @tablet {
+    width: 180px;
+    border-bottom: none;
+  }
+}
+
+.social-list__item {
+  width: 59px;
+  font-size: 0;
 }
