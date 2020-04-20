@@ -12,7 +12,6 @@
 .content-list__item {
   position: relative;
   width: 100%;
-  padding: 26px 27px 29px 28px;
 
   &::after {
     content: "";
@@ -52,7 +51,6 @@
   @media @tablet {
     width: 50%;
     align-items: stretch;
-    padding: 27px 35px 35px 36px;
 
     &--interior::after {
       top: 29px;
@@ -69,13 +67,17 @@
   font: inherit;
   .text-options (19px, 24px, 700, @bg-color);
   display: block;
-  width: 50%;
+  width: 320px;
+  margin: 0 auto;
+  padding: 26px 27px 29px 28px;
 
   &:active {
     opacity: 0.3;
   }
 
   @media @tablet {
+    padding: 27px 35px 35px 36px;
+
     font-size: 20px;
     line-height: 30px;
   }

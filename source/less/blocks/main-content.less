@@ -1,5 +1,4 @@
 .main-content {
-  .container();
   position: relative;
   z-index: -1;
   padding-top: 70px;
@@ -11,7 +10,6 @@
   background-repeat: no-repeat;
 
   @media @tablet {
-    .wrapper();
     padding-top: 154px;
     min-height: 746px;
 
@@ -39,10 +37,15 @@
   }
 }
 
+.main-content__wrapper {
+  .container();
+  width: 100%;
+}
+
 .main-content__title {
   .h2-model();
-  padding-left: 30px;
-  padding-right: 30px;
+  width: 260px;
+  margin: 0 auto;
   margin-bottom: 122px;
   text-align: center;
 
