@@ -1,3 +1,15 @@
+.contacts {
+  min-height: 901px;
+
+  @media @tablet {
+    min-height: 844px;
+  }
+
+  @media @desktop {
+    min-height: 500px;
+  }
+}
+
 .contacts__title {
   .h2-model();
 }
@@ -5,19 +17,22 @@
 .contacts__table {
   .p-model();
   line-height: 30px;
+
   border-collapse: collapse;
 }
 
 .contacts__value {
   .p-model();
+}
 
-  &--email {
-    color: inherit;
-    line-height: 30px;
-    border-bottom: 1px solid @design-color;
-  }
+.contacts__link {
+  color: inherit;
+  line-height: 30px;
 
-  &--address {
-    font-style: normal;
-  }
+  border-bottom: 1px solid @design-color;
+}
+
+
+.contacts__address {
+  font-style: normal;
 }

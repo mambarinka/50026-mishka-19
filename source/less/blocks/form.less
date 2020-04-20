@@ -1,20 +1,23 @@
-.form__type,
-.form__color,
-.form__name,
-.form__tel,
-.form__mail,
-.form__text {
-  margin: 0;
-  padding: 0;
-  border: none;
+.form__list {
+  .list-reset();
 }
 
-.form__legend {
+.form__item-title {
   .text-options(17px, 16px, 700, @design-color);
 }
 
-.form__list {
+.form__item-list {
   .list-reset();
+}
+
+.form__input {
+  &::placeholder {
+    .text-options(17px, 18px, 400, @text-color);
+  }
+
+  &--bigger::placeholder {
+    .text-options(19px, 18px, 400, @text-color);
+  }
 }
 
 .form__small {

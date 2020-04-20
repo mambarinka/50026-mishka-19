@@ -1,26 +1,189 @@
+.promo-week {
+  .container();
+  .wrapper();
+  position: relative;
+  padding-top: 25px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 6px;
+    left: 0;
+    bottom: 0;
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat;
+    background-size: cover;
+  }
+
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 41px;
+
+    &::after {
+      height: 15px;
+    }
+  }
+
+  @media @desktop {
+    padding-top: 120px;
+    padding-left: 224px;
+
+    &::after {
+      height: 23px;
+    }
+  }
+}
+
+.promo-week__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media @tablet {
+    width: 290px;
+  }
+}
+
 .promo-week__title {
   .h2-model();
+  margin-bottom: 5px;
+
+  @media @tablet {
+    width: 460px;
+    flex-grow: 1;
+    margin-bottom: 49px;
+
+    .text-options(43px, 50px, 700, @text-color-dark);
+  }
+
+  @media @desktop {
+    width: 700px;
+
+    .text-options(53px, 57px, 700, @text-color-dark);
+  }
 }
 
 .promo-week__caption {
+  display: block;
+  margin-bottom: 23px;
+
   .text-options(17px; 20px; 700; @design-color);
+  text-transform: uppercase;
+
+  @media @tablet {
+    width: 126px;
+    padding-top: 9px;
+    text-align: center;
+  }
+
+  @media @desktop {
+    position: absolute;
+    left: 69px;
+    order: -1;
+    padding-top: 13px;
+  }
 }
 
 .promo-week__description {
   .p-model();
+  margin-bottom: 19px;
+
+  @media @tablet {
+    width: 100%;
+    margin-bottom: 37px;
+
+    .text-options(17px, 30px, 400, @text-color);
+  }
+
+  @media @desktop {
+    margin-bottom: 49px;
+  }
 }
 
 .promo-week__table {
   .p-model();
+  width: 100%;
+  margin-bottom: 27px;
+
   line-height: 20px;
   border-collapse: collapse;
+
+  @media @tablet {
+    margin-bottom: 55px;
+  }
+
+  @media @desktop {
+    margin-bottom: 109px;
+  }
 }
 
 .promo-week__option,
 .promo-week__value {
+  padding-top: 8px;
+  padding-bottom: 11px;
   border-bottom: 1px solid @border-color-table;
 }
 
+.promo-week__value {
+  padding-left: 15px;
+
+  @media @tablet {
+    padding-left: 0;
+  }
+}
+
 .promo-week__price {
+  position: relative;
+  padding-top: 339px;
+  text-align: center;
   .text-options(17px, 24px, 700, @text-color);
+  margin-bottom: 26px;
+
+  @media @tablet {
+    width: 100%;
+    padding-top: 0;
+    margin-bottom: 34px;
+
+    font-size: 20px;
+  }
+}
+
+.promo-week__order {
+  order: 3;
+  padding: 14px;
+  margin-bottom: 40px;
+
+  @media @tablet {
+    width: 100%;
+    margin-bottom: 68px;
+  }
+
+  @media @desktop {
+    margin-bottom: 93px;
+  }
+}
+
+.promo-week__img {
+  position: absolute;
+  bottom: 142px;
+  display: block;
+  margin-bottom: 24px;
+
+  @media @tablet {
+    position: relative;
+    bottom: -7px;
+    width: 334px;
+  }
+
+  @media @desktop {
+    position: absolute;
+    width: 524px;
+    z-index: -1;
+    top: 69px;
+    right: 51px;
+  }
 }

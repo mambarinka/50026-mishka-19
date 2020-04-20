@@ -28,11 +28,34 @@
   color: @color;
 }
 
-/* дописать медиа-выражения тут
-
-.wrapper (@width; @left; @right) {
-  width: @width;
-  padding-left: @left;
-  padding-right: @right;
+.wrapper() {
+  min-width: 320px;
+  padding-left: 30px;
+  padding-right: 30px;
   margin: 0 auto;
-} */
+
+  @media @tablet {
+    max-width: 768px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media @desktop {
+    max-width: 1150px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.container() {
+  width: 320px;
+  margin: 0 auto;
+
+  @media @tablet {
+    width: 768px;
+  }
+
+  @media @desktop {
+    width: 1150px;
+  }
+}

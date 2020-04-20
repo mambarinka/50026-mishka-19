@@ -1,7 +1,32 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media @tablet {
+    width: 184px;
+  }
+}
+
 .copyright__text {
   .text-options(19px, 18px, 700, @text-color-dark);
 }
 
 .copyright__link {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 43px;
+  margin-left: 9px;
+
   font-size: 0;
+
+  @media @tablet {
+    margin-left: 18px;
+  }
+}
+
+.copyright__icon {
+  width: 42px;
+  height: 43px;
 }
