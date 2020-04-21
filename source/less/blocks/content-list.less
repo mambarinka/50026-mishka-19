@@ -20,16 +20,6 @@
 
   @media @tablet {
     width: 50%;
-    align-items: stretch;
-
-    &--interior::after {
-      top: 29px;
-    }
-
-    &--toys::after {
-      top: 31px;
-      right: 31px;
-    }
   }
 }
 
@@ -56,10 +46,6 @@
 
   &:hover::after {
     opacity: 0.7;
-  }
-
-  &:active::after {
-    opacity: 0.3;
   }
 
   &--interior {
@@ -97,33 +83,16 @@
 
     &--interior {
       &::after {
-        right: 36px;
-        top: 23px;
+        right: 37px;
+        top: 30px;
       }
     }
 
     &--toys {
       &::after {
-        right: 25px;
-        top: 22px;
+        right: 32px;
+        top: 32px;
       }
-    }
-
-    @media @desktop {
-      width: 25%;
-    }
-  }
-
-  .content-list__svg {
-    opacity: 0.5;
-
-    &:hover,
-    &:focus {
-      opacity: 0.7;
-    }
-
-    &:active {
-      opacity: 0.3;
     }
   }
 }
