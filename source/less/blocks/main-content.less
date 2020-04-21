@@ -38,8 +38,9 @@
 }
 
 .main-content__wrapper {
-  .container();
-  width: 100%;
+  @media @tablet {
+    .wrapper();
+  }
 }
 
 .main-content__title {
@@ -52,8 +53,9 @@
   font-size: 27px;
 
   @media @tablet {
+    width: 660px;
     .text-options(43px, 50px, 700, @text-color-dark);
-    margin-bottom: 374px;
+    margin-bottom: 373px;
   }
 
   @media @desktop {
