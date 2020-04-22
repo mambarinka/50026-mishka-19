@@ -1,6 +1,4 @@
 .page-footer {
-  .wrapper();
-  .container();
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,10 +6,21 @@
   background-color: @bg-grey-color;
 
   @media @tablet {
+    display: block;
+  }
+}
+
+.page-footer__wrapper {
+  .wrapper();
+
+  @media @tablet {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding-top: 33px;
     padding-bottom: 33px;
+    margin: 0 auto;
   }
 }
 
