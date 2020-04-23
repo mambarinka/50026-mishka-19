@@ -117,7 +117,8 @@
         <blockquote class="reviews__item">
           <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
             лайков,
-            как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу
+            как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии
+            сразу
             стали более стильными, а также набирают больше лайков!</p>
         </blockquote>
         <cite class="reviews__author"><b class="reviews__author--name">Анастасия Красильникова</b>
@@ -131,23 +132,24 @@
     </section>
 
     <section class="contacts">
-      <h2 class="contacts__title">Контакты</h2>
-      <table class="contacts__table">
-        <tr>
-          <td class="contacts__option">e-mail</td>
-          <td class="contacts__value"><a class="contacts__link"
-              href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
-        </tr>
-        <tr>
-          <td class="contacts__option">адрес:</td>
-          <td class="contacts__value">
-            <address class="contacts__address">г. Санкт-Петербург,
-              ул. Большая Конюшенная,
-              д. 19/8, офис 101</address>
-          </td>
-        </tr>
-      </table>
-      <iframe src="https://yandex.ru/map-widget/v1/-/CKubI--C" width="560" height="400" allowfullscreen=""></iframe>
+      <div class="contacts__wrapper">
+        <h2 class="contacts__title">Контакты</h2>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <span class="contacts__option">e-mail</span>
+            <a class="contacts__value contacts__value--link"
+              href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+          </li>
+          <li class="contacts__item">
+            <span class="contacts__option">адрес:</span>
+            <address class="contacts__value contacts__value--address">г. Санкт-Петербург,
+              ул.&nbsp;Большая Конюшенная,
+              д.&nbsp;19/8,&nbsp;офис 101</address>
+          </li>
+        </ul>
+      </div>
+      <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/-/CKubI--C" width="560" height="400"
+        allowfullscreen=""></iframe>
       <a class="contacts__button button" href="#">Напишите нам</a>
     </section>
   </main>

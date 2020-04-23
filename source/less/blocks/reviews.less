@@ -28,6 +28,10 @@
 
   @media @desktop {
     padding-top: 79px;
+
+    &::after {
+      height: 24px;
+    }
   }
 }
 
@@ -76,6 +80,11 @@
     margin-bottom: 35px;
     order: 3;
   }
+
+  @media @desktop {
+    width: 780px;
+    margin-bottom: 17px;
+  }
 }
 
 .reviews__text {
@@ -84,10 +93,6 @@
   line-height: 30px;
 
   @media @tablet {
-    font-size: 17px;
-  }
-
-  @media @desktop {
     font-size: 17px;
   }
 }
@@ -111,6 +116,14 @@
 
     &--name {
       font-size: 18px;
+    }
+  }
+
+  @media @desktop {
+    margin-bottom: 187px;
+
+    &--name {
+      font-size: 17px;
     }
   }
 }
