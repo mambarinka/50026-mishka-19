@@ -77,8 +77,6 @@
         justify-content: flex-end;
         padding-right: 50px;
         z-index: 1;
-
-        border-bottom: 1px solid @border-color-table;
       }
 
       &--closed {
@@ -141,6 +139,12 @@
       opacity: 0.2;
 
       background: url("../img/icon-cart.svg") no-repeat;
+    }
+
+    &--basket {
+      &:last-child {
+        border: none;
+      }
     }
 
     @media @tablet {
