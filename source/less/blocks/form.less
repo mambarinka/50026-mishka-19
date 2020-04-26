@@ -2,11 +2,25 @@
   .list-reset();
 }
 
-.form__item-title {
-  .text-options(17px, 16px, 700, @design-color);
+.form__item {
+  @media @tablet {
+    &--grey {
+      background-color: @bg-grey-color;
+    }
+  }
 }
 
-.form__item-list {
+.form__wrapper {
+  .container();
+  .wrapper();
+}
+
+.form__item-title {
+  .text-options(17px, 16px, 700, @design-color);
+  margin-bottom: 35px;
+}
+
+.form__option {
   .list-reset();
 }
 
