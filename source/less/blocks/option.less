@@ -9,51 +9,38 @@
 
 .option__label {
   .text-options(17px; 18px; 700; @text-color-dark);
+  line-height: 18px;
 }
 
 .option__input + .option__radio::before {
   content: "";
   display: inline-block;
   position: absolute;
-  top: 0;
+  top: -3px;
   left: 0;
-  width: 40px;
-  height: 40px;
+  width: 39px;
+  height: 39px;
   border: 2px solid @text-color-dark;
   border-radius: 50%;
 }
 
-/* input[type="checkbox"]+label::before {
+.option__input:checked + .option__radio::after {
   content: "";
   display: inline-block;
-  height: 23px;
-  width: 23px;
-  margin-right: 17px;
-
-  vertical-align: top;
-
-  background-image: url("../img/checkbox-off.svg");
-  background-repeat: no-repeat;
+  position: absolute;
+  top: 9px;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  background-color: @design-color;
+  border: 2px solid @design-color;
+  border-radius: 50%;
 }
 
-input[type="checkbox"]:checked+label::before {
-  content: "";
-  display: inline-block;
-  height: 23px;
-  width: 27px;
-  margin-right: 13px;
-
-  vertical-align: top;
-
-  background-image: url("../img/checkbox-on.svg");
-  background-repeat: no-repeat;
+.option__input:focus + .option__radio::before {
+  border: 2px solid @design-color;
 }
 
-input[type="checkbox"]:disabled+label::before {
+.option__input:active + .option__radio::before {
   opacity: 0.3;
 }
-
-input[type="checkbox"]:focus+label::before {
-  outline: 2px solid #81b3d2;
-}
- */
