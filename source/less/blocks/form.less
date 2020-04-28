@@ -13,12 +13,20 @@
 .form__wrapper {
   .container();
   .wrapper();
-  margin-bottom: 38px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .form__item-title {
   .text-options(17px, 16px, 700, @design-color);
-  margin-bottom: 29px;
+  min-height: 35px;
+  margin: 0;
+  margin-bottom: 17px;
+
+  &--less {
+    margin-bottom: 10px;
+  }
 }
 
 .form__option {

@@ -59,7 +59,8 @@
             <h2 class="form__item-title">Тип:</h2>
             <ul class="form__option option__list">
               <li class="option__item">
-                <input class="option__input visually-hidden" id="accessory" type="radio" name="type" value="accessory" checked>
+                <input class="option__input visually-hidden" id="accessory" type="radio" name="type" value="accessory"
+                  checked>
                 <label class="option__label option__radio" for="accessory">Аксессуар для
                   интерьера</label>
               </li>
@@ -73,30 +74,31 @@
 
         <li class="form__item form__item--grey option">
           <div class="form__wrapper">
-            <h2 class="form__item-title">Цвет:</h2>
-            <ul class="form__option option__list">
+            <h2 class="form__item-title form__item-title--less">Цвет:</h2>
+            <ul class="form__option option__list option__list--less">
               <li class="option__item">
-                <input class="option__input" id="white-color" type="checkbox" name="white-color" checked>
+                <input class="option__input visually-hidden" id="white-color" type="checkbox" name="white-color"
+                  checked>
                 <label class="option__label option__checkbox" for="white-color">Белый</label>
               </li>
               <li class="option__item">
-                <input class="option__input" id="grey-color" type="checkbox" name="grey-color" checked>
+                <input class="option__input visually-hidden" id="grey-color" type="checkbox" name="grey-color" checked>
                 <label class="option__label option__checkbox" for="grey-color">Серый</label>
               </li>
               <li class="option__item">
-                <input class="option__input" id="tiffany-color" type="checkbox" name="tiffany-color">
+                <input class="option__input visually-hidden" id="tiffany-color" type="checkbox" name="tiffany-color">
                 <label class="option__label option__checkbox" for="tiffany-color">«Тиффани»</label>
               </li>
               <li class="option__item">
-                <input class="option__input" id="black-color" type="checkbox" name="black-color">
+                <input class="option__input visually-hidden" id="black-color" type="checkbox" name="black-color">
                 <label class="option__label option__checkbox" for="black-color">Черный</label>
               </li>
               <li class="option__item">
-                <input class="option__input" id="pink-color" type="checkbox" name="pink-color">
+                <input class="option__input visually-hidden" id="pink-color" type="checkbox" name="pink-color">
                 <label class="option__label option__checkbox" for="pink-color">Розовый</label>
               </li>
               <li class="option__item">
-                <input class="option__input" id="orange-color" type="checkbox" name="orange-color">
+                <input class="option__input visually-hidden" id="orange-color" type="checkbox" name="orange-color">
                 <label class="option__label option__checkbox" for="orange-color">Оранжевый</label>
               </li>
             </ul>
@@ -105,21 +107,21 @@
 
         <li class="form__item option">
           <div class="form__wrapper">
-            <h2 class="form__item-title">ФИО</h2>
-            <ul class="form__item-list name-list">
-              <li class="name-list__item">
-                <label class="name-list__label" for="first-name">Имя:</label>
-                <input class="name-list__input" id="first-name" type="text" name="first-name"
+            <h2 class="form__item-title form__item-title--less">ФИО</h2>
+            <ul class="form__option option__list">
+              <li class="option__item option__item--text">
+                <label class="option__label option__text" for="first-name">Имя:</label>
+                <input class="option__input option__input--text" id="first-name" type="text" name="first-name"
                   placeholder="Введите ваше имя*" required>
               </li>
-              <li class="name-list__item">
-                <label class="name-list__label" for="second-name">Фамилия:</label>
-                <input class="name-list__input" id="second-name" type="text" name="second-name"
+              <li class="option__item option__item--text">
+                <label class="option__label option__text" for="second-name">Фамилия:</label>
+                <input class="option__input option__input--text" id="second-name" type="text" name="second-name"
                   placeholder="Укажите фамилию*" required>
               </li>
-              <li class="name-list__item">
-                <label class="name-list__label" for="middle-name">Отчество:</label>
-                <input class="name-list__input" id="middle-name" type="text" name="middle-name"
+              <li class="option__item option__item--text">
+                <label class="option__label option__text" for="middle-name">Отчество:</label>
+                <input class="option__input option__input--text" id="middle-name" type="text" name="middle-name"
                   placeholder="Отчество, если желаете">
               </li>
             </ul>

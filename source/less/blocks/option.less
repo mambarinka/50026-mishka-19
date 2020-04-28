@@ -1,22 +1,42 @@
 .option__list {
   .list-reset();
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 39px;
+
+  &--less {
+    margin-bottom: 32px;
+  }
 }
 
 .option__item {
   position: relative;
+  width: 100%;
+  margin-bottom: 22px;
   padding-left: 62px;
+
+  line-height: 19px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--text {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+  }
 }
 
 .option__label {
   .text-options(17px; 18px; 700; @text-color-dark);
-  line-height: 18px;
 }
 
 .option__input + .option__radio::before {
   content: "";
   display: inline-block;
   position: absolute;
-  top: -3px;
+  top: -9px;
   left: 0;
   width: 39px;
   height: 39px;
@@ -28,7 +48,7 @@
   content: "";
   display: inline-block;
   position: absolute;
-  top: 9px;
+  top: 3px;
   left: 12px;
   width: 16px;
   height: 16px;
@@ -37,10 +57,61 @@
   border-radius: 50%;
 }
 
-.option__input:focus + .option__radio::before {
+.option__input:focus + .option__radio::before,
+.option__input:hover + .option__radio::before,
+.option__input:focus + .option__checkbox::before,
+.option__input:hover + .option__checkbox::before {
   border: 2px solid @design-color;
 }
 
-.option__input:active + .option__radio::before {
+.option__input:active + .option__radio::before,
+.option__input:active + .option__checkbox::before {
   opacity: 0.3;
+}
+
+.option__checkbox {
+  line-height: 39px;
+}
+
+.option__input + .option__checkbox::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 39px;
+  height: 39px;
+  border: 2px solid @text-color-dark;
+}
+
+.option__input:checked + .option__checkbox::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 9px;
+  left: 7px;
+  width: 25px;
+  height: 17px;
+  background: url("../img/icon-tick.svg") no-repeat;
+  background-size: 25px;
+}
+
+.option__text {
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.option__input {
+  &--text {
+    width: 100%;
+
+    padding-bottom: 19px;
+
+    border: none;
+    box-shadow: inset 0 -2px 0 0 @text-color-dark;
+
+    &::placeholder {
+      .text-options(17px; 18px; 400; rgba(68, 68, 68, 0.3));
+    }
+  }
 }
