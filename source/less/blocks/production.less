@@ -1,23 +1,140 @@
 .production {
-  min-height: 562px;
-  border: 1px solid @border-color-table;
+  .container();
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 58px;
 
   @media @tablet {
-    min-height: 808px;
+    .wrapper();
+    margin-bottom: 63px;
   }
 
   @media @desktop {
-    min-height: 565px;
+    margin-bottom: 105px;
+  }
+}
+
+.production__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 27px;
+  text-align: left;
+
+  border: 1px solid @border-color-table;
+
+  @media @tablet {
+    padding-top: 0;
+  }
+
+  @media @desktop {
+    position: relative;
+    padding-top: 47px;
+    padding-right: 57px;
   }
 }
 
 .production__title {
   .h2-model();
+  position: relative;
+  width: 200px;
+  margin-bottom: 24px;
+  padding-left: 60px;
+
   font-size: 17px;
   line-height: 24px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 3px;
+    top: 5px;
+    width: 32px;
+    height: 29px;
+
+    background: url("../img/icon-video.svg") no-repeat;
+  }
+
+  @media @tablet {
+    width: 576px;
+    margin-bottom: 32px;
+
+    font-size: 20px;
+    line-height: 24px;
+
+    &::before {
+      left: -4px;
+      top: -5px;
+    }
+  }
+
+  @media @desktop {
+    width: 291px;
+    margin-left: auto;
+    padding-top: 49px;
+
+    &::before {
+      left: 61px;
+    }
+  }
+}
+
+.production__video {
+  width: 100%;
+  min-height: 150px;
+  margin-bottom: 26px;
+  outline: 1px solid blue;
+
+  @media @tablet {
+    min-height: 455px;
+    margin-bottom: 38px;
+    order: -1;
+  }
+
+  @media @desktop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 682px;
+  }
 }
 
 .production__text {
   .p-model();
+  width: 192px;
+  margin-bottom: 24px;
+
   font-size: 13px;
+
+  @media @tablet {
+    width: 587px;
+    margin-bottom: 36px;
+
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  @media @desktop {
+    width: 231px;
+    margin-left: auto;
+    margin-bottom: 47px;
+  }
+}
+
+.production__button {
+  width: 192px;
+  margin-bottom: 33px;
+  padding: 14px 20px;
+
+  @media @tablet {
+    width: 585px;
+    margin-bottom: 45px;
+  }
+
+  @media @desktop {
+    width: 230px;
+    margin-left: auto;
+    margin-bottom: 59px;
+  }
 }

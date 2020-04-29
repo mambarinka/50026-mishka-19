@@ -77,8 +77,6 @@
         justify-content: flex-end;
         padding-right: 50px;
         z-index: 1;
-
-        border-bottom: 1px solid @border-color-table;
       }
 
       &--closed {
@@ -108,6 +106,7 @@
         width: 450px;
         display: flex;
         align-items: flex-start;
+        z-index: 2;
       }
     }
   }
@@ -141,6 +140,12 @@
       opacity: 0.2;
 
       background: url("../img/icon-cart.svg") no-repeat;
+    }
+
+    &--basket {
+      &:last-child {
+        border: none;
+      }
     }
 
     @media @tablet {
@@ -245,6 +250,10 @@
       display: block;
       padding-right: 50px;
       margin-top: 18px;
+    }
+
+    @media @desktop {
+      z-index: 2;
     }
   }
 }
