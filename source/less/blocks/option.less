@@ -2,10 +2,14 @@
   .list-reset();
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 39px;
+  margin-bottom: 40px;
 
   &--less {
     margin-bottom: 32px;
+  }
+
+  @media @tablet {
+    margin-bottom: 66px;
   }
 }
 
@@ -26,10 +30,36 @@
     flex-wrap: wrap;
     padding-left: 0;
   }
+
+  @media @tablet {
+    margin-bottom: 56px;
+    padding-left: 80px;
+
+    &--color {
+      width: 239px;
+
+      &:nth-child(odd) {
+        margin-right: 23px;
+      }
+    }
+
+    &--text {
+      padding-left: 0;
+    }
+  }
 }
 
 .option__label {
   .text-options(17px; 18px; 700; @text-color-dark);
+
+  @media @tablet {
+    font-size: 19px;
+  }
+}
+
+.option__text {
+  width: 100%;
+  margin-bottom: 14px;
 }
 
 .option__input + .option__radio::before {
@@ -42,6 +72,13 @@
   height: 39px;
   border: 2px solid @text-color-dark;
   border-radius: 50%;
+
+  @media @tablet {
+    top: -16px;
+    left: 0;
+    width: 52px;
+    height: 52px;
+  }
 }
 
 .option__input:checked + .option__radio::after {
@@ -55,6 +92,13 @@
   background-color: @design-color;
   border: 2px solid @design-color;
   border-radius: 50%;
+
+  @media @tablet {
+    top: 0;
+    left: 15px;
+    width: 21px;
+    height: 21px;
+  }
 }
 
 .option__input:focus + .option__radio::before,
@@ -71,6 +115,10 @@
 
 .option__checkbox {
   line-height: 39px;
+
+  @media @tablet {
+    line-height: 18px;
+  }
 }
 
 .option__input + .option__checkbox::before {
@@ -82,6 +130,13 @@
   width: 39px;
   height: 39px;
   border: 2px solid @text-color-dark;
+
+  @media @tablet {
+    top: -16px;
+    left: 0;
+    width: 54px;
+    height: 52px;
+  }
 }
 
 .option__input:checked + .option__checkbox::after {
@@ -94,24 +149,38 @@
   height: 17px;
   background: url("../img/icon-tick.svg") no-repeat;
   background-size: 25px;
+
+  @media @tablet {
+    top: -2px;
+    left: 10px;
+    width: 35px;
+    height: 35px;
+    background-size: 35px;
+  }
 }
 
-.option__text {
-  width: 100%;
-  margin-bottom: 14px;
-}
 
 .option__input {
-  &--text {
-    width: 100%;
+  width: 100%;
+  padding-bottom: 19px;
 
-    padding-bottom: 19px;
+  border: none;
+  box-shadow: inset 0 -2px 0 0 @text-color-dark;
 
-    border: none;
-    box-shadow: inset 0 -2px 0 0 @text-color-dark;
+  &::placeholder {
+    .text-options(17px; 18px; 400; rgba(68, 68, 68, 0.3));
+  }
 
-    &::placeholder {
-      .text-options(17px; 18px; 400; rgba(68, 68, 68, 0.3));
-    }
+  &--contacts {
+    margin-bottom: 32px;
+  }
+
+  &--add {
+    min-height: 142px;
+    margin-bottom: 16px;
+    padding: 15px;
+
+    border: 2px solid @text-color;
+    box-shadow: none;
   }
 }

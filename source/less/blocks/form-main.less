@@ -8,6 +8,30 @@
   font-size: 27px;
 
   background-color: @bg-grey-color;
+
+  @media @tablet {
+    position: relative;
+    padding-top: 94px;
+    padding-bottom: 92px;
+    margin-bottom: 62px;
+    z-index: -1;
+
+    font-size: 43px;
+    line-height: 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 24px;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat;
+      background-size: contain;
+    }
+  }
 }
 
 .form-main__text {
@@ -17,4 +41,11 @@
   margin-bottom: 23px;
 
   font-size: 13px;
+
+  @media @tablet {
+    margin-bottom: 9px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
 }

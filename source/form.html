@@ -76,28 +76,28 @@
           <div class="form__wrapper">
             <h2 class="form__item-title form__item-title--less">Цвет:</h2>
             <ul class="form__option option__list option__list--less">
-              <li class="option__item">
+              <li class="option__item option__item--color">
                 <input class="option__input visually-hidden" id="white-color" type="checkbox" name="white-color"
                   checked>
                 <label class="option__label option__checkbox" for="white-color">Белый</label>
               </li>
-              <li class="option__item">
+              <li class="option__item option__item--color">
                 <input class="option__input visually-hidden" id="grey-color" type="checkbox" name="grey-color" checked>
                 <label class="option__label option__checkbox" for="grey-color">Серый</label>
               </li>
-              <li class="option__item">
+              <li class="option__item option__item--color">
                 <input class="option__input visually-hidden" id="tiffany-color" type="checkbox" name="tiffany-color">
                 <label class="option__label option__checkbox" for="tiffany-color">«Тиффани»</label>
               </li>
-              <li class="option__item">
+              <li class="option__item option__item--color">
                 <input class="option__input visually-hidden" id="black-color" type="checkbox" name="black-color">
                 <label class="option__label option__checkbox" for="black-color">Черный</label>
               </li>
-              <li class="option__item">
+              <li class="option__item option__item--color">
                 <input class="option__input visually-hidden" id="pink-color" type="checkbox" name="pink-color">
                 <label class="option__label option__checkbox" for="pink-color">Розовый</label>
               </li>
-              <li class="option__item">
+              <li class="option__item option__item--color">
                 <input class="option__input visually-hidden" id="orange-color" type="checkbox" name="orange-color">
                 <label class="option__label option__checkbox" for="orange-color">Оранжевый</label>
               </li>
@@ -105,59 +105,60 @@
           </div>
         </li>
 
-        <li class="form__item option">
+        <li class="form__item form__item--text option">
           <div class="form__wrapper">
             <h2 class="form__item-title form__item-title--less">ФИО</h2>
-            <ul class="form__option option__list">
+            <ul class="form__option option__list option__list--less">
               <li class="option__item option__item--text">
                 <label class="option__label option__text" for="first-name">Имя:</label>
-                <input class="option__input option__input--text" id="first-name" type="text" name="first-name"
+                <input class="option__input" id="first-name" type="text" name="first-name"
                   placeholder="Введите ваше имя*" required>
               </li>
               <li class="option__item option__item--text">
                 <label class="option__label option__text" for="second-name">Фамилия:</label>
-                <input class="option__input option__input--text" id="second-name" type="text" name="second-name"
+                <input class="option__input" id="second-name" type="text" name="second-name"
                   placeholder="Укажите фамилию*" required>
               </li>
               <li class="option__item option__item--text">
                 <label class="option__label option__text" for="middle-name">Отчество:</label>
-                <input class="option__input option__input--text" id="middle-name" type="text" name="middle-name"
+                <input class="option__input" id="middle-name" type="text" name="middle-name"
                   placeholder="Отчество, если желаете">
               </li>
             </ul>
           </div>
         </li>
 
-        <li class="form__item form__item--grey">
+        <li class="form__item form__item--grey option">
           <div class="form__wrapper">
-            <label class="form__item-title" for="tel">Тел</label>
-            <input class="form__input form__input--bigger" type="tel" name="tel" id="tel"
-              placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+            <label class="form__item-title form__item-title--contacts" for="tel">Тел</label>
+            <input class="option__input option__input--contacts" type="tel" name="tel" id="tel"
+              placeholder="+7 XXX XXX XX XX*" required>
           </div>
         </li>
 
-        <li class="form__item form__item--grey">
+        <li class="form__item form__item--grey option">
           <div class="form__wrapper">
-            <label class="form__item-title" for="email">E-mail</label>
-            <input class="form__input" type="email" name="email" id="email" placeholder="Ваш Email*" required>
+            <label class="form__item-title form__item-title--contacts" for="email">E-mail</label>
+            <input class="option__input option__input--contacts" type="email" name="email" id="email"
+              placeholder="Ваш Email*" required>
           </div>
         </li>
 
-        <li class="form__item">
-          <div class="form__wrapper">
-            <label class="form__item-title" for="additional">Доп</label>
-            <textarea class="form__input" name="additional" id="additional"
+        <li class="form__item option">
+          <div class="form__wrapper option">
+            <label class="form__item-title form__item-title--add" for="additional">Доп</label>
+            <textarea class="option__input option__input--add" name="additional" id="additional"
               placeholder="Опишите все ваши пожелания к заказу"></textarea>
             <div class="form__wrapper">
         </li>
       </ul>
 
-      <small class="form__small">
-        <sup>*</sup>Поля обязательны для заполнения
-      </small>
-
-      <button class="form-button button" type="submit">Отправить заказ</button>
-
+      <div class="form__wrapper">
+        <small class="form__small">
+          <sup>*</sup>Поля обязательны для заполнения
+        </small>
+        <button class="form__button button" type="submit">Отправить заказ</button>
+      </div>
     </form>
   </main>
 
