@@ -10,6 +10,14 @@
 
   @media @tablet {
     margin-bottom: 66px;
+
+    &--less {
+      margin-bottom: 10px;
+    }
+
+    &--more {
+      margin-bottom: 51px;
+    }
   }
 }
 
@@ -44,7 +52,20 @@
     }
 
     &--text {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
       padding-left: 0;
+    }
+  }
+
+  @media @desktop {
+    &--color {
+      margin-right: 23px;
+    }
+
+    &--text {
+      margin-right: 175px;
     }
   }
 }
@@ -60,6 +81,11 @@
 .option__text {
   width: 100%;
   margin-bottom: 14px;
+
+  @media @tablet {
+    width: auto;
+    margin-right: 25px;
+  }
 }
 
 .option__input + .option__radio::before {
@@ -159,7 +185,6 @@
   }
 }
 
-
 .option__input {
   width: 100%;
   padding-bottom: 19px;
@@ -171,7 +196,8 @@
     .text-options(17px; 18px; 400; rgba(68, 68, 68, 0.3));
   }
 
-  &--contacts {
+  &--tel,
+  &--email {
     margin-bottom: 32px;
   }
 
@@ -182,5 +208,40 @@
 
     border: 2px solid @text-color;
     box-shadow: none;
+  }
+
+  @media @tablet {
+    width: auto;
+    flex-grow: 1;
+    padding-left: 16px;
+    padding-bottom: 18px;
+
+    &::placeholder {
+      font-size: 19px;
+    }
+
+    &--tel {
+      margin-bottom: 41px;
+
+      background-color: transparent;
+    }
+
+    &--email {
+      margin-bottom: 50px;
+
+      background-color: transparent;
+    }
+
+    &--add {
+      margin-top: -16px;
+    }
+  }
+
+  @media @desktop {
+    &--tel,
+    &--email,
+    &--add {
+      margin-right: 175px;
+    }
   }
 }

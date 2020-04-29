@@ -1,5 +1,13 @@
 .form__list {
   .list-reset();
+
+  @media @tablet {
+    margin-bottom: 38px;
+  }
+
+  @media @desktop {
+    margin-bottom: 34px;
+  }
 }
 
 .form__item {
@@ -10,8 +18,8 @@
       background-color: @bg-grey-color;
     }
 
-    &--text {
-      padding-top: 10px;
+    &--less {
+      padding-top: 0;
     }
   }
 }
@@ -25,6 +33,12 @@
 
   @media @tablet {
     flex-direction: row;
+  }
+
+  @media @desktop {
+    &--button {
+      padding-left: 225px;
+    }
   }
 }
 
@@ -50,7 +64,11 @@
 
   @media @tablet {
     width: 167px;
-    outline: 2px solid maroon;
+  }
+
+  @media @desktop {
+    width: 175px;
+    padding-left: 60px;
   }
 }
 
@@ -60,16 +78,34 @@
   @media @tablet {
     width: 500px;
     flex-grow: 1;
-    outline: 2px solid indigo;
   }
 }
 
 .form__small {
   .text-options(14px, 16px, 400, @text-color);
   margin-bottom: 31px;
+
+  @media @tablet {
+    width: auto;
+    order: 1;
+    padding-top: 10px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .form__button {
-  padding: 15px 15px 13px 15px;
+  padding: 15px 32px 13px 28px;
   margin-bottom: 55px;
+
+  @media @tablet {
+    width: auto;
+    margin-right: 139px;
+    margin-bottom: 50px;
+  }
+
+  @media @desktop {
+    margin-right: 172px;
+  }
 }

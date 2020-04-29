@@ -108,7 +108,7 @@
         <li class="form__item form__item--text option">
           <div class="form__wrapper">
             <h2 class="form__item-title form__item-title--less">ФИО</h2>
-            <ul class="form__option option__list option__list--less">
+            <ul class="form__option option__list option__list--less option__list--more">
               <li class="option__item option__item--text">
                 <label class="option__label option__text" for="first-name">Имя:</label>
                 <input class="option__input" id="first-name" type="text" name="first-name"
@@ -131,15 +131,15 @@
         <li class="form__item form__item--grey option">
           <div class="form__wrapper">
             <label class="form__item-title form__item-title--contacts" for="tel">Тел</label>
-            <input class="option__input option__input--contacts" type="tel" name="tel" id="tel"
+            <input class="option__input option__input--tel" type="tel" name="tel" id="tel"
               placeholder="+7 XXX XXX XX XX*" required>
           </div>
         </li>
 
-        <li class="form__item form__item--grey option">
+        <li class="form__item form__item--grey form__item--less option">
           <div class="form__wrapper">
             <label class="form__item-title form__item-title--contacts" for="email">E-mail</label>
-            <input class="option__input option__input--contacts" type="email" name="email" id="email"
+            <input class="option__input option__input--email" type="email" name="email" id="email"
               placeholder="Ваш Email*" required>
           </div>
         </li>
@@ -153,7 +153,7 @@
         </li>
       </ul>
 
-      <div class="form__wrapper">
+      <div class="form__wrapper form__wrapper--button">
         <small class="form__small">
           <sup>*</sup>Поля обязательны для заполнения
         </small>
