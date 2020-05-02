@@ -41,6 +41,7 @@
 .reviews__wrapper {
   .wrapper();
   .container();
+  position: relative;
 
   @media @tablet {
     display: flex;
@@ -59,9 +60,9 @@
     &::after {
       position: absolute;
       content: "";
-      width: calc(100% - 100px);
+      width: 100%;
       height: 24px;
-      left: 50px;
+      left: 0;
       bottom: 0;
 
       background-image: url("../img/bg-zigzag-line.svg");
