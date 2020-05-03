@@ -17,7 +17,9 @@
     </a>
 
     <nav class="main-nav main-nav--closed main-nav--nojs">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <div class="main-nav__wrapper-button">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+      </div>
       <ul class="main-nav__list main-nav__list--order">
         <li class="main-nav__item main-nav__item--catalog">
           <a class="main-nav__link main-nav__link--catalog">Каталог товаров</a>
@@ -27,11 +29,11 @@
         </li>
       </ul>
       <ul class="main-nav__list main-nav__list--user">
-        <li class="main-nav__item main-nav__item--search">
+        <li class="main-nav__item">
           <a class="main-nav__link main-nav__link--search" href="search.html">Поиск по сайту</a>
         </li>
         <li class="main-nav__item main-nav__item--basket">
-          <a class="main-nav__link" href="basket.html">Корзина: пока пуста</a>
+          <a class="main-nav__link main-nav__link--basket" href="basket.html">Корзина: пока пуста</a>
         </li>
       </ul>
       <ul class="main-nav__list main-nav__list--promotion">
@@ -223,20 +225,20 @@
   </footer>
 
   <script>
-var navMain = document.querySelector('.main-nav');
-  var navToggle = document.querySelector('.main-nav__toggle');
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
 
-  navMain.classList.remove('main-nav--nojs');
+    navMain.classList.remove('main-nav--nojs');
 
-  navToggle.addEventListener('click', function() {
-    if (navMain.classList.contains('main-nav--closed')) {
-      navMain.classList.remove('main-nav--closed');
-      navMain.classList.add('main-nav--opened');
-    } else {
-      navMain.classList.add('main-nav--closed');
-      navMain.classList.remove('main-nav--opened');
-    }
-  });
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
 
   </script>
 </body>
