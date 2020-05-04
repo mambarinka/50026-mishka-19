@@ -1,5 +1,4 @@
 .main-content {
-  position: relative;
   padding-top: 70px;
   min-height: 490px;
 
@@ -16,6 +15,13 @@
 
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position: center top;
+  }
+}
+
+.main-content__wrapper {
+  @media @tablet {
+    .wrapper();
+    position: relative;
 
     &::after {
       position: absolute;
@@ -32,17 +38,9 @@
   }
 
   @media @desktop {
-    z-index: 1;
-
     &::after {
-      height: 20px;
+      height: 21px;
     }
-  }
-}
-
-.main-content__wrapper {
-  @media @tablet {
-    .wrapper();
   }
 }
 
