@@ -1,3 +1,7 @@
+.catalog__wrapper-title {
+  background-color: @bg-grey-color;
+}
+
 .catalog__title {
   .h2-model();
   padding-top: 70px;
@@ -7,14 +11,12 @@
 
   font-size: 27px;
 
-  background-color: @bg-grey-color;
-
   @media @tablet {
+    .container();
     position: relative;
     padding-top: 96px;
     padding-bottom: 92px;
     margin-bottom: 68px;
-    z-index: -1;
 
     font-size: 43px;
     line-height: 50px;
@@ -40,11 +42,6 @@
 
     font-size: 53px;
     line-height: 57px;
-
-    &::after {
-      background-repeat: repeat;
-      background-size: cover;
-    }
   }
 }
 
