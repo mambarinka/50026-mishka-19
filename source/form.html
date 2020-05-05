@@ -13,7 +13,11 @@
 
   <header class="page-header">
     <a class="logo" href="index.html">
-      <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Mishka">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Mishka">
+      </picture>
     </a>
 
     <nav class="main-nav main-nav--closed main-nav--nojs">
