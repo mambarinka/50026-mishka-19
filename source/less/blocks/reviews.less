@@ -27,6 +27,11 @@
     &::after {
       height: 17px;
     }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px auto;
+    }
   }
 
   @media @desktop {
@@ -67,6 +72,11 @@
       background-image: url("../img/bg-zigzag-line.svg");
       background-repeat: repeat;
       background-size: cover;
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px auto;
     }
   }
 }
