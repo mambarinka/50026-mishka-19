@@ -1,8 +1,9 @@
 .modal {
+  display: none;
   position: fixed;
-  top: 25%;
-  left: 0;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 100;
   padding-top: 30px;
 
@@ -15,16 +16,14 @@
   border: solid 1px #c6c6c6;
 
   @media @tablet {
-    top: calc(50% - 168px);
-    left: calc(50% - 283px);
     width: 566px;
     margin: 0 auto;
     padding-top: 34px;
   }
+}
 
-  @media @desktop {
-    top: calc(50% - 178px);
-  }
+.modal--js-show {
+  display: block;
 }
 
 .modal__wrapper {
@@ -38,6 +37,7 @@
 }
 
 .modal__overlay-js {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -45,6 +45,10 @@
   height: 100%;
   background-color: rgba(@bg-color, 0.9);
   z-index: 90;
+}
+
+.modal__overlay--js-show {
+  display: block;
 }
 
 .modal__title {
