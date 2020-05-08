@@ -10,6 +10,8 @@
 }
 
 .content-list__item {
+  height: 103px;
+
   &--interior {
     background-color: @design-color;
   }
@@ -20,6 +22,7 @@
 
   @media @tablet {
     width: 50%;
+    height: auto;
   }
 }
 
@@ -32,7 +35,7 @@
 
   font: inherit;
   .text-options (19px, 24px, 700, @bg-color);
-  white-space: pre-line;
+  /* white-space: pre-line; */
   cursor: pointer;
 
   &:active {
