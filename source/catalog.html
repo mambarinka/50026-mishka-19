@@ -81,7 +81,7 @@
             </p>
             <div class="card-product__price">
               <b>1 200 руб.</b>
-              <button class="card-product__basket">
+              <button class="card-product__basket js-button-cart">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px"
                   viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849"
@@ -114,7 +114,7 @@
             </p>
             <div class="card-product__price">
               <b>690 руб.</b>
-              <button class="card-product__basket">
+              <button class="card-product__basket js-button-cart">
                 <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px"
                   viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849"
@@ -148,7 +148,7 @@
             </p>
             <div class="card-product__price">
               <b>1 500 руб.</b>
-              <button class="card-product__basket">
+              <button class="card-product__basket js-button-cart">
                 <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px"
                   viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849"
@@ -264,6 +264,34 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal__overlay-js"></div>
+  <section class="modal">
+    <div class="modal__wrapper">
+      <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
+        <p class="modal__legend">Выберите размер:</p>
+        <ul class="modal__list">
+          <li class="modal__item">
+            <input class="visually-hidden modal__input" type="radio" name="size" value="small" id="small"
+              aria-label="Маленький размер" checked="">
+            <label class="modal__label" for="small">s</label>
+          </li>
+          <li class="modal__item">
+            <input class="visually-hidden modal__input" type="radio" name="size" value="medium" id="medium"
+              aria-label="Средний размер">
+            <label class="modal__label" for="medium">m</label>
+          </li>
+          <li class="modal__item">
+            <input class="visually-hidden modal__input" type="radio" name="size" value="large" id="large"
+              aria-label="Большой размер">
+            <label class="modal__label" for="large">l</label>
+          </li>
+        </ul>
+        <button class="modal__button button" type="submit">Добавить</button>
+      </form>
+    </div>
+  </section>
 
   <script src="js/script.js"></script>
   <script src="js/picturefill.js"></script>

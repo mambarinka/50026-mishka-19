@@ -92,7 +92,7 @@
           </tr>
         </table>
         <b class="promo-week__price">Цена: 990 руб.</b>
-        <a class="promo-week__order button">Заказать</a>
+        <a class="promo-week__order button js-button-cart">Заказать</a>
         <picture>
           <!-- <source type="image/webp" media="(min-width: 1150px)"
             srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
@@ -254,6 +254,34 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal__overlay-js"></div>
+  <section class="modal">
+    <div class="modal__wrapper">
+      <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
+        <p class="modal__legend">Выберите размер:</p>
+        <ul class="modal__list">
+          <li class="modal__item">
+            <input class="visually-hidden modal__input" type="radio" name="size" value="small" id="small"
+              aria-label="Маленький размер" checked="">
+            <label class="modal__label" for="small">s</label>
+          </li>
+          <li class="modal__item">
+            <input class="visually-hidden modal__input" type="radio" name="size" value="medium" id="medium"
+              aria-label="Средний размер">
+            <label class="modal__label" for="medium">m</label>
+          </li>
+          <li class="modal__item">
+            <input class="visually-hidden modal__input" type="radio" name="size" value="large" id="large"
+              aria-label="Большой размер">
+            <label class="modal__label" for="large">l</label>
+          </li>
+        </ul>
+        <button class="modal__button button" type="submit">Добавить</button>
+      </form>
+    </div>
+  </section>
 
   <script src="js/script.js"></script>
   <script src="js/picturefill.js"></script>
