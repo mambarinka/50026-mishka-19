@@ -21,11 +21,11 @@
   }
 
   &:hover {
-    transform: scaleY(1.05);
+    height: 108px;
   }
 
   &:hover .content-list__link {
-    padding: 18px 130px 28px 0;
+    padding: 18px 130px 23px 0;
   }
 
   &:hover .content-list__link--interior::after {
@@ -37,11 +37,11 @@
   }
 
   &:active {
-    transform: scaleY(1);
+    height: 103px;
   }
 
   &:active .content-list__link {
-    padding: 23px 130px 28px 0;
+    padding: 23px 130px 23px 0;
   }
 
   &:active .content-list__link--interior::after {
@@ -54,7 +54,31 @@
 
   @media @tablet {
     width: 50%;
-    height: auto;
+    height: 118px;
+
+    &:hover {
+      height: 123px;
+    }
+
+    &:active {
+      height: 118px;
+    }
+
+    &:hover .content-list__link--interior::after {
+      top: 21px;
+    }
+
+    &:hover .content-list__link--toys::after {
+      top: 18px;
+    }
+  }
+
+  @media @desktop {
+    height: 119px;
+
+    &:hover .content-list__link {
+      padding: 23px 37px 35px;
+    }
   }
 }
 

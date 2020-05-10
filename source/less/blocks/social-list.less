@@ -25,4 +25,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:hover .social-list__icon path,
+  &:focus .social-list__icon path {
+    fill: @design-color;
+  }
+
+  &:active .social-list__icon path {
+    opacity: 0.3;
+  }
 }
