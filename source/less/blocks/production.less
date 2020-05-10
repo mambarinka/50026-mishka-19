@@ -25,6 +25,15 @@
 
   border: 1px solid @border-color-table;
 
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+
   @media @tablet {
     padding-top: 0;
   }
@@ -110,6 +119,16 @@
   background: transparent url("../img/icon-play.svg") no-repeat;
   border: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
 
   @media @tablet {
     top: 189px;

@@ -20,6 +20,38 @@
     background-color: @design-dark-color;
   }
 
+  &:hover {
+    transform: scaleY(1.05);
+  }
+
+  &:hover .content-list__link {
+    padding: 18px 130px 28px 0;
+  }
+
+  &:hover .content-list__link--interior::after {
+    top: 16px;
+  }
+
+  &:hover .content-list__link--toys::after {
+    top: 13px;
+  }
+
+  &:active {
+    transform: scaleY(1);
+  }
+
+  &:active .content-list__link {
+    padding: 23px 130px 28px 0;
+  }
+
+  &:active .content-list__link--interior::after {
+    top: 21px;
+  }
+
+  &:active .content-list__link--toys::after {
+    top: 18px;
+  }
+
   @media @tablet {
     width: 50%;
     height: auto;
@@ -27,11 +59,11 @@
 }
 
 .content-list__link {
+  .container();
   position: relative;
   display: block;
-  width: 320px;
-  margin: 0 auto;
-  padding: 26px 27px 29px 28px;
+  width: 260px;
+  padding: 23px 130px 28px 0;
 
   font: inherit;
   .text-options (19px, 24px, 700, @bg-color);
@@ -53,8 +85,8 @@
 
   &--interior {
     &::after {
-      right: 36px;
-      top: 23px;
+      right: 5px;
+      top: 21px;
       width: 40px;
       height: 62px;
 
@@ -66,8 +98,8 @@
 
   &--toys {
     &::after {
-      right: 25px;
-      top: 22px;
+      right: -6px;
+      top: 18px;
       width: 62px;
       height: 62px;
 
@@ -78,22 +110,40 @@
   }
 
   @media @tablet {
-    width: auto;
-    padding: 28px 35px 35px 35px;
+    width: 260px;
+    padding: 27px 85px 35px 0;
 
     font-size: 20px;
     line-height: 30px;
 
     &--interior {
       &::after {
-        right: 37px;
+        right: 0;
         top: 30px;
       }
     }
 
     &--toys {
       &::after {
-        right: 32px;
+        right: -5px;
+        top: 32px;
+      }
+    }
+  }
+
+  @media @desktop {
+    margin: 0;
+    padding: 28px 37px 35px;
+
+    &--interior {
+      &::after {
+        left: 448px;
+      }
+    }
+
+    &--toys {
+      &::after {
+        left: 430px;
         top: 32px;
       }
     }

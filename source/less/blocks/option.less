@@ -136,6 +136,7 @@
 
 .option__input:active + .option__radio::before,
 .option__input:active + .option__checkbox::before {
+  border: 2px solid @text-color;
   opacity: 0.3;
 }
 
@@ -207,8 +208,19 @@
     margin-bottom: 16px;
     padding: 15px;
 
-    border: 2px solid @text-color;
     box-shadow: none;
+    border: 2px solid @text-color;
+  }
+
+  &:hover,
+  &:active {
+    box-shadow: inset 0 -2px 0 0 @design-color;
+  }
+
+  &--add:hover,
+  &--add:focus {
+    box-shadow: none;
+    border: solid 2px @design-color;
   }
 
   @media @tablet {
@@ -247,3 +259,19 @@
     }
   }
 }
+
+.option__icon {
+  position: absolute;
+  right: 75px;
+  top: -6px;
+  opacity: 0.2;
+}
+
+.option__input:hover + .option__icon {
+  opacity: 1;
+}
+
+.option__input:hover + .option__icon path {
+  fill: @design-color;
+}
+

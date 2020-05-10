@@ -91,6 +91,7 @@
 }
 
 .modal__label {
+  .text-options(17px, 16px, 700, @text-color);
   display: block;
   width: 81px;
   padding: 16px;
@@ -98,9 +99,11 @@
   border: 2px solid rgba(68, 68, 68, 0.1);
   cursor: pointer;
 
-  font-size: 17px;
-  line-height: 16px;
   text-transform: uppercase;
+
+  &:hover {
+    border: 2px solid rgba(68, 68, 68, 0.3);
+  }
 
   @media @tablet {
     width: 112px;
