@@ -19,33 +19,31 @@ navToggle.addEventListener('click', function () {
 
 if (buttonCart) {
   for (var i = 0; i < buttonCart.length; i++) {
-    buttonCart[i].addEventListener("click", function(evt) {
+    buttonCart[i].addEventListener("click", function (evt) {
       evt.preventDefault();
       modal.classList.add("modal--js-show");
-      overlay.classList.add("modal__overlay--js-show");
     })
-  }};
+  }
+};
 
-  if (buttonAdd) {
-    buttonAdd.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      modal.classList.remove("modal--js-show");
-      overlay.classList.remove("modal__overlay--js-show");
-    })
-  };
+if (buttonAdd) {
+  buttonAdd.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modal.classList.remove("modal--js-show");
+  })
+};
 
-  if (overlay) {
-    overlay.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      modal.classList.remove("modal--js-show");
-      overlay.classList.remove("modal__overlay--js-show");
-    })
-  };
+if (overlay) {
+  overlay.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modal.classList.remove("modal--js-show");
+  })
+};
 
-  window.addEventListener("keydown", function(evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-        modal.classList.remove("modal--js-show");
-        overlay.classList.remove("modal__overlay--js-show");
-    }
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    modal.classList.remove("modal--js-show");
+    overlay.classList.remove("modal__overlay--js-show");
+  }
 });
