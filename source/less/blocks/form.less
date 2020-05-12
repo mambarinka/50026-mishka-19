@@ -27,12 +27,13 @@
 .form__wrapper {
   .container();
   .wrapper();
+  position: relative;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
 
   @media @tablet {
     flex-direction: row;
+    align-items: flex-start;
   }
 
   @media @desktop {
@@ -44,26 +45,44 @@
 
 .form__item-title {
   .text-options(17px, 16px, 700, @design-color);
+  display: flex;
+  align-items: center;
   min-height: 35px;
+  width: auto;
   margin: 0;
-  margin-bottom: 17px;
+  margin-bottom: 24px;
 
   text-transform: uppercase;
 
+  &::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    flex-grow: 1;
+    margin-left: 21px;
+
+    background-color: @design-color;
+  }
+
   &--less {
-    margin-bottom: 10px;
+    margin-bottom: 17px;
   }
 
   &--contacts {
-    margin-bottom: 3px;
+    margin-bottom: 0;
   }
 
   &--add {
-    margin-bottom: 6px;
+    margin-bottom: 15px;
   }
 
   @media @tablet {
     width: 167px;
+    margin-top: -10px;
+
+    &::after {
+      display: none;
+    }
   }
 
   @media @desktop {

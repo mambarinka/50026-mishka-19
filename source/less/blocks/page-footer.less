@@ -31,6 +31,15 @@
     display: block;
     width: 102px;
     margin-right: 78px;
+
+    &:hover .page-footer__icon path,
+    &:focus .page-footer__icon path {
+      fill: @design-color;
+    }
+
+    &:active .page-footer__icon path {
+      opacity: 0.3;
+    }
   }
 
   @media @desktop {

@@ -2,10 +2,10 @@
   .list-reset();
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 34px;
 
   &--less {
-    margin-bottom: 32px;
+    margin-bottom: 23px;
   }
 
   @media @tablet {
@@ -36,6 +36,7 @@
   &--row {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 23px;
     padding-left: 0;
   }
 
@@ -80,7 +81,7 @@
 
 .option__text {
   width: 100%;
-  margin-bottom: 14px;
+  margin-bottom: 0;
 
   @media @tablet {
     width: auto;
@@ -136,6 +137,7 @@
 
 .option__input:active + .option__radio::before,
 .option__input:active + .option__checkbox::before {
+  border: 2px solid @text-color;
   opacity: 0.3;
 }
 
@@ -188,7 +190,7 @@
 .option__input {
   width: 100%;
   font-size: 17px;
-  line-height: 35px;
+  line-height: 49px;
 
   border: none;
   box-shadow: inset 0 -2px 0 0 @text-color-dark;
@@ -199,31 +201,55 @@
 
   &--tel,
   &--email {
-    margin-bottom: 32px;
+    margin-bottom: 23px;
+
+    line-height: 47px;
+  }
+
+  &--tel {
+    font-size: 19px;
+
+    &::placeholder {
+      font-size: 19px;
+    }
   }
 
   &--add {
     min-height: 142px;
     margin-bottom: 16px;
-    padding: 15px;
+    padding: 15px 15px 15px 15px;
 
-    border: 2px solid @text-color;
+    line-height: 18px;
+
     box-shadow: none;
+    border: 2px solid @text-color;
+  }
+
+  &:hover,
+  &:active {
+    box-shadow: inset 0 -2px 0 0 @design-color;
+  }
+
+  &--add:hover,
+  &--add:focus {
+    box-shadow: none;
+    border: solid 2px @design-color;
   }
 
   @media @tablet {
     width: auto;
     flex-grow: 1;
+    margin-top: -15px;
     padding-left: 16px;
 
-    line-height: 34px;
+    line-height: 49px;
 
     &::placeholder {
       font-size: 19px;
     }
 
     &--tel {
-      margin-bottom: 41px;
+      margin-bottom: 40px;
 
       background-color: transparent;
     }
@@ -235,7 +261,9 @@
     }
 
     &--add {
-      margin-top: -16px;
+      margin-top: -15px;
+
+      line-height: 18px;
     }
   }
 
@@ -246,4 +274,37 @@
       margin-right: 175px;
     }
   }
+}
+
+.option__icon {
+  position: absolute;
+  width: 32px;
+  opacity: 0.2;
+  right: 34px;
+  bottom: 39px;
+
+  &--email {
+    bottom: 32px;
+  }
+
+  @media @tablet {
+    right: 72px;
+    bottom: 55px;
+
+    &--email {
+      bottom: 58px;
+    }
+  }
+
+  @media @desktop {
+    right: 230px;
+  }
+}
+
+.option__input:hover + .option__icon {
+  opacity: 1;
+}
+
+.option__input:hover + .option__icon path {
+  fill: @design-color;
 }

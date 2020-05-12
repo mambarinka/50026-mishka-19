@@ -13,6 +13,11 @@
 
 .copyright__text {
   .text-options(19px, 18px, 700, @text-color-dark);
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__link {
@@ -24,12 +29,25 @@
 
   font-size: 0;
 
+  &:hover .copyright__icon path,
+  &:focus .copyright__icon path {
+    fill: @design-dark-color;
+  }
+
+  &:focus .copyright__icon path {
+    opacity: 0.3;
+  }
+
   @media @tablet {
     margin-left: 18px;
   }
 }
 
 .copyright__icon {
-  width: 42px;
-  height: 43px;
+  width: 27px;
+  height: 34px;
+}
+
+.copyright__icon path {
+  fill: @design-color;
 }
