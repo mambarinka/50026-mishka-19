@@ -256,6 +256,7 @@
   top: 31px;
   width: 21px;
   height: 18px;
+  opacity: 0.2;
 
   @media @tablet {
     left: 32px;
@@ -263,17 +264,13 @@
   }
 }
 
-.main-nav__icon path {
-  opacity: 0.2;
-}
-
-.main-nav__link[href]:hover .main-nav__icon path,
-.main-nav__link[href]:focus .main-nav__icon path {
+.main-nav__link[href]:hover .main-nav__icon,
+.main-nav__link[href]:focus .main-nav__icon {
   fill: @design-color;
   opacity: 1;
 }
 
-.main-nav__link[href]:active .main-nav__icon path {
+.main-nav__link[href]:active .main-nav__icon {
   fill: @design-color;
   opacity: 0.3;
 }

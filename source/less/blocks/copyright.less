@@ -29,12 +29,12 @@
 
   font-size: 0;
 
-  &:hover .copyright__icon path,
-  &:focus .copyright__icon path {
+  &:hover .copyright__icon,
+  &:focus .copyright__icon {
     fill: @design-dark-color;
   }
 
-  &:focus .copyright__icon path {
+  &:active .copyright__icon {
     opacity: 0.3;
   }
 
@@ -46,8 +46,5 @@
 .copyright__icon {
   width: 27px;
   height: 34px;
-}
-
-.copyright__icon path {
   fill: @design-color;
 }
