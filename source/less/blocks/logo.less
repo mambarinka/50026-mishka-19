@@ -25,6 +25,17 @@
 }
 
 .logo__image {
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media @tablet {
     width: 113px;
     margin-left: 50px;

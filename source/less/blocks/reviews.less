@@ -26,6 +26,11 @@
 
     &::after {
       height: 17px;
+      bottom: 1px;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position-x: 0;
+      transform: scale(1, -1);
     }
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -70,8 +75,9 @@
       bottom: 0;
 
       background-image: url("../img/bg-zigzag-line.svg");
-      background-repeat: repeat;
-      background-size: cover;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform: scale(1, -1);
     }
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -182,6 +188,15 @@
   min-height: 52px;
 
   border: 1px solid @border-color-table;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media @tablet {
     width: 88px;
