@@ -12,6 +12,10 @@ var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 
 var server = require("browser-sync").create();
+var csso = require("gulp-csso");
+var rename = require("gulp-rename");
+var imagemin = require("gulp-imagemin");
+var webp = require("gulp-webp");
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
