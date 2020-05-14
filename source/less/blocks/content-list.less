@@ -94,17 +94,19 @@
   white-space: pre-line;
   cursor: pointer;
 
-  &:active {
-    opacity: 0.3;
-  }
-
   &::after {
     content: "";
     position: absolute;
+    fill: #149080;
+    opacity: 0.5;
   }
 
   &:hover::after {
     opacity: 0.7;
+  }
+
+  &:active::after {
+    opacity: 0.3;
   }
 
   &--interior {

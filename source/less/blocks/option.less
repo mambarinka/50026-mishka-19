@@ -282,6 +282,7 @@
   opacity: 0.2;
   right: 34px;
   bottom: 39px;
+  fill: @text-color-dark;
 
   &--email {
     bottom: 32px;
@@ -301,7 +302,8 @@
   }
 }
 
-.option__input:hover + .option__icon {
+.option__input:hover + .option__icon,
+.option__input:active + .option__icon {
   opacity: 1;
   fill: @design-color;
 }
