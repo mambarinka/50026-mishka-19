@@ -3,21 +3,19 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
-  padding-bottom: 26px;
 
   @media @tablet {
     flex-direction: row;
     align-items: stretch;
-    padding-bottom: 0;
-    margin-bottom: 52px;
+    margin-bottom: 54px;
   }
 
   @media @desktop {
     flex-direction: column;
     flex-wrap: wrap;
-    width: 315px;
-    margin-right: 52px;
-    margin-bottom: 56px;
+    width: 316px;
+    margin-right: 51px;
+    margin-bottom: 57px;
 
     &:nth-child(3n) {
       margin-right: 0;
@@ -26,28 +24,31 @@
 }
 
 .card-product__photo {
-  margin-bottom: 28px;
+  min-height: 195px;
+  margin-bottom: 19px;
 
   @media @tablet {
-    width: 100%;
-    min-height: 332px;
+    width: 50%;
+    height: 332px;
     margin-bottom: 0;
   }
 
   @media @desktop {
-    min-height: 462px;
+    width: 316px;
+    height: 462px;
     margin-bottom: 25px;
   }
 }
 
 .card-product__wrapper {
+  display: flex;
+  flex-direction: column;
   width: 206px;
 
   @media @tablet {
-    display: flex;
-    flex-direction: column;
     width: 50%;
-    padding: 26px 26px 27px 27px;
+    padding: 26px;
+    padding-bottom: 0;
   }
 
   @media @desktop {
@@ -57,20 +58,26 @@
   }
 }
 
+.card-product__link {
+  &:hover .card-product__title,
+  &:focus .card-product__title {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active .card-product__title {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  @media @tablet {
+    min-height: 30px;
+  }
+}
+
 .card-product__title {
   .text-options(17px; 24px; 700; @text-color-dark);
   margin: 0;
   margin-bottom: 4px;
   cursor: pointer;
-
-  &:hover,
-  &:focus {
-    color: rgba(0, 0, 0, 0.6);
-  }
-
-  &:active {
-    color: rgba(0, 0, 0, 0.3);
-  }
 
   @media @tablet {
     margin-bottom: 6px;
@@ -81,9 +88,9 @@
 
 .card-product__info {
   .text-options(13px; 30px; 400; @text-color);
+  min-height: 50px;
   margin: 0;
-  margin-bottom: 16px;
-  padding-bottom: 19px;
+  margin-bottom: 21px;
 
   border-bottom: 1px solid @border-color-table;
 
@@ -95,18 +102,19 @@
   }
 
   @media @desktop {
-    padding-bottom: 14px;
+    min-height: 44px;
   }
 }
 
 .card-product__price {
   display: flex;
   justify-content: space-between;
-  margin-top: 21px;
+  margin-bottom: 26px;
 
   .text-options(15px; 24px; 700; @text-color-dark);
 
   @media @tablet {
+    margin-top: 20px;
     padding-left: 5px;
     padding-right: 4px;
 
@@ -114,8 +122,8 @@
   }
 
   @media @desktop {
-    margin-top: 22px;
-    margin-bottom: 21px;
+    margin-top: 23px;
+    margin-bottom: 25px;
     padding-left: 0;
   }
 }
@@ -140,5 +148,9 @@
   &:active .card-product__icon {
     fill: @design-color;
     opacity: 0.3;
+  }
+
+  @media @desktop {
+    padding: 0;
   }
 }
