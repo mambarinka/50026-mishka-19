@@ -25,6 +25,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
 
   &:hover .social-list__icon,
   &:focus .social-list__icon {
@@ -33,6 +35,11 @@
 
   &:active .social-list__icon {
     opacity: 0.3;
+  }
+
+  @media @tablet {
+    padding-top: 33px;
+    padding-bottom: 33px;
   }
 }
 
