@@ -189,6 +189,8 @@
 
 .option__input {
   width: 100%;
+  min-height: 49px;
+
   font-size: 17px;
   line-height: 49px;
 
@@ -196,7 +198,7 @@
   box-shadow: inset 0 -2px 0 0 @text-color-dark;
 
   &::placeholder {
-    .text-options(17px; 18px; 400; rgba(68, 68, 68, 0.3));
+    .text-options(17px; 49px; 400; rgba(68, 68, 68, 0.3));
   }
 
   &--tel,
@@ -223,6 +225,10 @@
 
     box-shadow: none;
     border: 2px solid @text-color;
+
+    &::placeholder {
+      line-height: 19px;
+    }
   }
 
   &:hover,
@@ -273,6 +279,10 @@
     &--email,
     &--add {
       margin-right: 175px;
+    }
+
+    &--tel {
+      margin-bottom: 44px;
     }
   }
 }
