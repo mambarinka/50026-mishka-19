@@ -12,14 +12,17 @@
 
 .page-footer__wrapper {
   .wrapper();
+  padding-top: 23px;
+  padding-bottom: 23px;
 
   @media @tablet {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-top: 33px;
-    padding-bottom: 33px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
     margin: 0 auto;
   }
 }
@@ -32,12 +35,12 @@
     width: 102px;
     margin-right: 78px;
 
-    &:hover .page-footer__icon path,
-    &:focus .page-footer__icon path {
+    &:hover .page-footer__icon,
+    &:focus .page-footer__icon {
       fill: @design-color;
     }
 
-    &:active .page-footer__icon path {
+    &:active .page-footer__icon {
       opacity: 0.3;
     }
   }
@@ -47,10 +50,6 @@
   }
 }
 
-.page-footer__social {
-  min-height: 80px;
-}
-
-.page-footer__copyright {
-  min-height: 76px;
+.page-footer__icon {
+  fill: @text-color-dark;
 }

@@ -10,7 +10,7 @@
 }
 
 .content-list__item {
-  height: 103px;
+  min-height: 103px;
 
   &--interior {
     background-color: @design-color;
@@ -21,7 +21,7 @@
   }
 
   &:hover {
-    height: 108px;
+    min-height: 108px;
   }
 
   &:hover .content-list__link {
@@ -37,7 +37,7 @@
   }
 
   &:active {
-    height: 103px;
+    min-height: 103px;
   }
 
   &:active .content-list__link {
@@ -54,14 +54,14 @@
 
   @media @tablet {
     width: 50%;
-    height: 118px;
+    min-height: 118px;
 
     &:hover {
-      height: 123px;
+      min-height: 123px;
     }
 
     &:active {
-      height: 118px;
+      min-height: 118px;
     }
 
     &:hover .content-list__link--interior::after {
@@ -74,7 +74,7 @@
   }
 
   @media @desktop {
-    height: 119px;
+    min-height: 119px;
 
     &:hover .content-list__link {
       padding: 23px 37px 35px;
@@ -94,17 +94,18 @@
   white-space: pre-line;
   cursor: pointer;
 
-  &:active {
-    opacity: 0.3;
-  }
-
   &::after {
     content: "";
     position: absolute;
+    opacity: 0.5;
   }
 
   &:hover::after {
     opacity: 0.7;
+  }
+
+  &:active::after {
+    opacity: 0.3;
   }
 
   &--interior {

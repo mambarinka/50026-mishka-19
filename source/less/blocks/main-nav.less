@@ -3,7 +3,12 @@
     .wrapper();
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
     width: 100%;
+  }
+
+  @media @desktop {
+    justify-content: flex-start;
   }
 }
 
@@ -98,39 +103,41 @@
 
   @media @tablet {
     flex-direction: row;
+    align-items: flex-start;
 
     &--user {
-      width: 100%;
+      width: 352px;
       order: -1;
     }
 
     &--order {
-      position: absolute;
-      width: 398px;
-      top: 75px;
+      width: 430px;
+      margin-bottom: -62px;
       z-index: 10;
     }
   }
 
   @media @desktop {
     &--order {
-      top: 0;
-      width: 450px;
+      width: 440px;
+      margin-bottom: 0;
       z-index: 2;
+      order: 0;
     }
 
     &--user {
+      margin-left: auto;
+      order: 1;
       border: none;
     }
 
     &--promotion {
-      position: absolute;
-      top: 75px;
-      left: 50px;
       width: 450px;
       display: flex;
       align-items: flex-start;
+      margin-bottom: -86px;
       z-index: 2;
+      order: 2;
     }
   }
 }
@@ -171,6 +178,7 @@
 
     &--basket {
       width: 265px;
+      margin-right: 0;
     }
   }
 
@@ -221,14 +229,18 @@
     width: auto;
     padding-left: 0;
     padding-top: 31px;
-    padding-bottom: 33px;
+    padding-bottom: 32px;
 
     &--catalog,
     &--form {
+      padding-top: 19px;
+      padding-bottom: 19px;
+
       font-size: 15px;
     }
 
     &--search {
+      min-height: 87px;
       font-size: 0;
     }
 
@@ -240,11 +252,17 @@
   @media @desktop {
     &--catalog,
     &--form {
+      padding-top: 30px;
+      padding-bottom: 30px;
+
       font-size: 17px;
     }
 
     &--incoming,
     &--sale {
+      padding-top: 19px;
+      padding-bottom: 19px;
+
       font-size: 15px;
     }
   }
@@ -256,6 +274,8 @@
   top: 31px;
   width: 21px;
   height: 18px;
+  opacity: 0.2;
+  fill: #231f20;
 
   @media @tablet {
     left: 32px;
@@ -263,36 +283,32 @@
   }
 }
 
-.main-nav__icon path {
-  opacity: 0.2;
-}
-
-.main-nav__link[href]:hover .main-nav__icon path,
-.main-nav__link[href]:focus .main-nav__icon path {
+.main-nav__link[href]:hover .main-nav__icon,
+.main-nav__link[href]:focus .main-nav__icon {
   fill: @design-color;
   opacity: 1;
 }
 
-.main-nav__link[href]:active .main-nav__icon path {
+.main-nav__link[href]:active .main-nav__icon {
   fill: @design-color;
   opacity: 0.3;
 }
 
 .main-nav__text {
   .p-model();
-  position: absolute;
-  right: 0;
   display: none;
 
   @media @tablet {
     display: block;
-    padding-right: 50px;
-    margin-top: 18px;
-    top: 88px;
+    margin-left: auto;
+    margin-bottom: -88px;
+    padding-top: 19px;
     z-index: 10;
   }
 
   @media @desktop {
+    margin-bottom: -86px;
     z-index: 2;
+    order: 4;
   }
 }
