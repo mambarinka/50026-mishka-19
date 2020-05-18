@@ -6,6 +6,7 @@
   @media @tablet {
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: flex-end;
   }
 }
 
@@ -27,6 +28,7 @@
   position: relative;
   display: block;
   width: 320px;
+  min-height: 103px;
   margin: 0 auto;
   padding: 24px 121px 30px 28px;
 
@@ -35,7 +37,7 @@
   cursor: pointer;
 
   &:hover {
-    padding: 19px 121px 40px 28px;
+    min-height: 108px;
   }
 
   &::after {
@@ -55,14 +57,6 @@
       background-repeat: no-repeat;
       opacity: 0.5;
     }
-
-    &:hover::after {
-      top: 16px;
-    }
-
-    &:active::after {
-      top: 21px;
-    }
   }
 
   &--toys {
@@ -76,14 +70,6 @@
       background-repeat: no-repeat;
       opacity: 0.5;
     }
-
-    &:hover::after {
-      top: 13px;
-    }
-
-    &:active::after {
-      top: 18px;
-    }
   }
 
   &:hover::after {
@@ -91,7 +77,7 @@
   }
 
   &:active {
-    padding: 24px 121px 30px 28px;
+    min-height: 103px;
     opacity: 0.3;
   }
 
