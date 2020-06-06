@@ -23,7 +23,8 @@
     "gulp-webp": "^4.0.1",
     "posthtml-include": "^1.4.3",
     "stylelint": "10.1.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint-config-htmlacademy": "0.1.x",
+    "suffix": "^1.0.0"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
