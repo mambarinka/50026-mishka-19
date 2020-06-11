@@ -18,6 +18,9 @@ var htmlmin = require("gulp-htmlmin");
 var uglify = require("gulp-uglify");
 var server = require("browser-sync").create();
 
+var ghPages = require("gh-pages");
+var path = require("path");
+
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
@@ -123,6 +126,12 @@ gulp.task("refresh", function (done) {
   done();
 });
 
+// to run task "npx gulp deploy"
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), "./build"), cb);
+}
+exports.deploy = deploy;
+
 gulp.task("build", gulp.series(
   "clean",
   "copy",
@@ -133,3 +142,8 @@ gulp.task("build", gulp.series(
 ));
 
 gulp.task("start", gulp.series("build", "server"));
+
+gulp.task("deploy", function () {
+  return gulp.src("build/**/*")
+    .pipe(ghPages());
+});
