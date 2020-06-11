@@ -845,6 +845,7 @@ input[type="radio"].visually-hidden {
 }
 .page-main {
   outline: 1px solid transparent;
+  background-color: plum;
 }
 .main-content {
   position: relative;
