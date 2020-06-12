@@ -18,6 +18,9 @@ var htmlmin = require("gulp-htmlmin");
 var uglify = require("gulp-uglify");
 var server = require("browser-sync").create();
 
+var ghPages = require("gh-pages");
+var path = require("path");
+
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
@@ -75,20 +78,28 @@ gulp.task("html", function () {
     .pipe(htmlmin({
       collapseWhitespace: true
     }))
-    .pipe(rename({
-      suffix: ".min"
-    }))
+    /*     .pipe(rename({
+          suffix: ".min"
+        })) */
     .pipe(gulp.dest("build"));
+});
+
+gulp.task("js", function () {
+  return gulp.src("source/js/*.js")
+    .pipe(uglify())
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(gulp.dest("build/js"))
 });
 
 gulp.task("copy", function () {
   return gulp.src([
-      "source/fonts/**/*.{woff,woff2}",
-      "source/img/**",
-      "source/*.ico"
-    ], {
-      base: "source"
-    })
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**",
+    "source/js/**/*.min.js",
+    "source/*.ico"
+  ], {
+    base: "source"
+  })
     .pipe(gulp.dest("build"));
 });
 
@@ -115,23 +126,25 @@ gulp.task("refresh", function (done) {
   done();
 });
 
-gulp.task("js", async function () {
-  return gulp.src("source/js/**/*.js")
-    .pipe(uglify())
-    .pipe(rename({
-      suffix: ".min"
-    }))
-    .pipe(gulp.dest("build/js"))
-    .pipe(server.stream());
-});
+// to run task "npx gulp deploy"
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), "./build"), cb);
+}
+exports.deploy = deploy;
 
 gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
+  "js",
   "sprite",
   "html",
   "js",
 ));
 
 gulp.task("start", gulp.series("build", "server"));
+
+gulp.task("deploy", function () {
+  return gulp.src("build/**/*")
+    .pipe(ghPages());
+});
